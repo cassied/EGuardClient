@@ -1,0 +1,23 @@
+using System;
+using System.IO;
+
+namespace blacklist
+{
+	class Program
+	{
+		public static void Main(string[] args)
+		{
+			Console.WriteLine("Hello World!");
+			
+			// TODO: Implement Functionality Here
+			String path = @"C:\Windows\System32\drivers\etc\hosts";
+        	StreamWriter sw = new StreamWriter(path, true);
+       	 	String sitetoblock = "\n127.0.0.1 cnn.com";
+        	sw.Write(sitetoblock);
+        	sw.Close();
+			
+			Console.Write("Press any key to continue . . . ");
+			Console.ReadKey(true);
+		}
+	}
+}
