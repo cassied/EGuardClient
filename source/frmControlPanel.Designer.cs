@@ -31,9 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmControlPanel));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblURLs = new System.Windows.Forms.Label();
-            this.lvSuggestedURLs = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
-            this.lvBlockedURLs = new System.Windows.Forms.ListView();
             this.lblBlockedURLs = new System.Windows.Forms.Label();
             this.btnBlock = new System.Windows.Forms.Button();
             this.btnRemoveBlock = new System.Windows.Forms.Button();
@@ -46,6 +44,8 @@
             this.lblTimeEnd = new System.Windows.Forms.Label();
             this.btnTimeControl = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.lvSuggestedURLs = new System.Windows.Forms.ListBox();
+            this.lvBlockedURLs = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEnd)).BeginInit();
@@ -70,14 +70,6 @@
             this.lblURLs.TabIndex = 1;
             this.lblURLs.Text = "URL Management";
             // 
-            // lvSuggestedURLs
-            // 
-            this.lvSuggestedURLs.Location = new System.Drawing.Point(29, 222);
-            this.lvSuggestedURLs.Name = "lvSuggestedURLs";
-            this.lvSuggestedURLs.Size = new System.Drawing.Size(260, 97);
-            this.lvSuggestedURLs.TabIndex = 2;
-            this.lvSuggestedURLs.UseCompatibleStateImageBehavior = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -87,14 +79,6 @@
             this.label1.Size = new System.Drawing.Size(152, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Suggested Blocked URLs";
-            // 
-            // lvBlockedURLs
-            // 
-            this.lvBlockedURLs.Location = new System.Drawing.Point(393, 222);
-            this.lvBlockedURLs.Name = "lvBlockedURLs";
-            this.lvBlockedURLs.Size = new System.Drawing.Size(260, 97);
-            this.lvBlockedURLs.TabIndex = 4;
-            this.lvBlockedURLs.UseCompatibleStateImageBehavior = false;
             // 
             // lblBlockedURLs
             // 
@@ -237,12 +221,30 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // lvSuggestedURLs
+            // 
+            this.lvSuggestedURLs.FormattingEnabled = true;
+            this.lvSuggestedURLs.Location = new System.Drawing.Point(24, 222);
+            this.lvSuggestedURLs.Name = "lvSuggestedURLs";
+            this.lvSuggestedURLs.Size = new System.Drawing.Size(251, 95);
+            this.lvSuggestedURLs.TabIndex = 17;
+            // 
+            // lvBlockedURLs
+            // 
+            this.lvBlockedURLs.FormattingEnabled = true;
+            this.lvBlockedURLs.Location = new System.Drawing.Point(404, 222);
+            this.lvBlockedURLs.Name = "lvBlockedURLs";
+            this.lvBlockedURLs.Size = new System.Drawing.Size(251, 95);
+            this.lvBlockedURLs.TabIndex = 18;
+            // 
             // frmControlPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(679, 544);
+            this.Controls.Add(this.lvBlockedURLs);
+            this.Controls.Add(this.lvSuggestedURLs);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnTimeControl);
             this.Controls.Add(this.lblTimeEnd);
@@ -255,9 +257,7 @@
             this.Controls.Add(this.btnRemoveBlock);
             this.Controls.Add(this.btnBlock);
             this.Controls.Add(this.lblBlockedURLs);
-            this.Controls.Add(this.lvBlockedURLs);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lvSuggestedURLs);
             this.Controls.Add(this.lblURLs);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -275,9 +275,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblURLs;
-        private System.Windows.Forms.ListView lvSuggestedURLs;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView lvBlockedURLs;
         private System.Windows.Forms.Label lblBlockedURLs;
         private System.Windows.Forms.Button btnBlock;
         private System.Windows.Forms.Button btnRemoveBlock;
@@ -290,5 +288,7 @@
         private System.Windows.Forms.Label lblTimeEnd;
         private System.Windows.Forms.Button btnTimeControl;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.ListBox lvSuggestedURLs;
+        private System.Windows.Forms.ListBox lvBlockedURLs;
     }
 }
