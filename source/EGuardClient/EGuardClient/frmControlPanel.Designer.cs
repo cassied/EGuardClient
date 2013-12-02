@@ -46,6 +46,10 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.lvSuggestedURLs = new System.Windows.Forms.ListBox();
             this.lvBlockedURLs = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEnd)).BeginInit();
@@ -64,17 +68,18 @@
             // 
             this.lblURLs.AutoSize = true;
             this.lblURLs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblURLs.Location = new System.Drawing.Point(253, 172);
+            this.lblURLs.Location = new System.Drawing.Point(253, 151);
             this.lblURLs.Name = "lblURLs";
             this.lblURLs.Size = new System.Drawing.Size(136, 17);
             this.lblURLs.TabIndex = 1;
             this.lblURLs.Text = "URL Management";
+            this.lblURLs.Click += new System.EventHandler(this.lblURLs_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 206);
+            this.label1.Location = new System.Drawing.Point(68, 185);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 13);
             this.label1.TabIndex = 3;
@@ -84,7 +89,7 @@
             // 
             this.lblBlockedURLs.AutoSize = true;
             this.lblBlockedURLs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBlockedURLs.Location = new System.Drawing.Point(466, 206);
+            this.lblBlockedURLs.Location = new System.Drawing.Point(466, 185);
             this.lblBlockedURLs.Name = "lblBlockedURLs";
             this.lblBlockedURLs.Size = new System.Drawing.Size(88, 13);
             this.lblBlockedURLs.TabIndex = 5;
@@ -93,7 +98,7 @@
             // btnBlock
             // 
             this.btnBlock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBlock.Location = new System.Drawing.Point(302, 237);
+            this.btnBlock.Location = new System.Drawing.Point(302, 205);
             this.btnBlock.Name = "btnBlock";
             this.btnBlock.Size = new System.Drawing.Size(75, 23);
             this.btnBlock.TabIndex = 6;
@@ -103,7 +108,7 @@
             // btnRemoveBlock
             // 
             this.btnRemoveBlock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveBlock.Location = new System.Drawing.Point(302, 261);
+            this.btnRemoveBlock.Location = new System.Drawing.Point(302, 229);
             this.btnRemoveBlock.Name = "btnRemoveBlock";
             this.btnRemoveBlock.Size = new System.Drawing.Size(75, 23);
             this.btnRemoveBlock.TabIndex = 7;
@@ -114,7 +119,7 @@
             // 
             this.lblTimeControl.AutoSize = true;
             this.lblTimeControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeControl.Location = new System.Drawing.Point(277, 343);
+            this.lblTimeControl.Location = new System.Drawing.Point(277, 379);
             this.lblTimeControl.Name = "lblTimeControl";
             this.lblTimeControl.Size = new System.Drawing.Size(100, 17);
             this.lblTimeControl.TabIndex = 8;
@@ -131,7 +136,7 @@
             "Fri",
             "Sat",
             "Sun"});
-            this.checkedListBox1.Location = new System.Drawing.Point(42, 388);
+            this.checkedListBox1.Location = new System.Drawing.Point(42, 425);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(120, 109);
             this.checkedListBox1.TabIndex = 9;
@@ -140,7 +145,7 @@
             // 
             this.lblDays.AutoSize = true;
             this.lblDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDays.Location = new System.Drawing.Point(87, 372);
+            this.lblDays.Location = new System.Drawing.Point(87, 409);
             this.lblDays.Name = "lblDays";
             this.lblDays.Size = new System.Drawing.Size(35, 13);
             this.lblDays.TabIndex = 10;
@@ -148,7 +153,7 @@
             // 
             // timeStart
             // 
-            this.timeStart.Location = new System.Drawing.Point(198, 388);
+            this.timeStart.Location = new System.Drawing.Point(198, 425);
             this.timeStart.Maximum = new decimal(new int[] {
             24,
             0,
@@ -167,7 +172,7 @@
             // 
             this.lblTime1.AutoSize = true;
             this.lblTime1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime1.Location = new System.Drawing.Point(214, 372);
+            this.lblTime1.Location = new System.Drawing.Point(214, 409);
             this.lblTime1.Name = "lblTime1";
             this.lblTime1.Size = new System.Drawing.Size(61, 13);
             this.lblTime1.TabIndex = 12;
@@ -175,7 +180,7 @@
             // 
             // timeEnd
             // 
-            this.timeEnd.Location = new System.Drawing.Point(334, 388);
+            this.timeEnd.Location = new System.Drawing.Point(334, 425);
             this.timeEnd.Maximum = new decimal(new int[] {
             24,
             0,
@@ -194,7 +199,7 @@
             // 
             this.lblTimeEnd.AutoSize = true;
             this.lblTimeEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeEnd.Location = new System.Drawing.Point(359, 372);
+            this.lblTimeEnd.Location = new System.Drawing.Point(359, 409);
             this.lblTimeEnd.Name = "lblTimeEnd";
             this.lblTimeEnd.Size = new System.Drawing.Size(60, 13);
             this.lblTimeEnd.TabIndex = 14;
@@ -203,7 +208,7 @@
             // btnTimeControl
             // 
             this.btnTimeControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimeControl.Location = new System.Drawing.Point(516, 388);
+            this.btnTimeControl.Location = new System.Drawing.Point(516, 425);
             this.btnTimeControl.Name = "btnTimeControl";
             this.btnTimeControl.Size = new System.Drawing.Size(112, 23);
             this.btnTimeControl.TabIndex = 15;
@@ -224,18 +229,63 @@
             // lvSuggestedURLs
             // 
             this.lvSuggestedURLs.FormattingEnabled = true;
-            this.lvSuggestedURLs.Location = new System.Drawing.Point(24, 222);
+            this.lvSuggestedURLs.Location = new System.Drawing.Point(24, 201);
             this.lvSuggestedURLs.Name = "lvSuggestedURLs";
-            this.lvSuggestedURLs.Size = new System.Drawing.Size(251, 95);
+            this.lvSuggestedURLs.Size = new System.Drawing.Size(251, 56);
             this.lvSuggestedURLs.TabIndex = 17;
             // 
             // lvBlockedURLs
             // 
             this.lvBlockedURLs.FormattingEnabled = true;
-            this.lvBlockedURLs.Location = new System.Drawing.Point(404, 222);
+            this.lvBlockedURLs.Location = new System.Drawing.Point(404, 201);
             this.lvBlockedURLs.Name = "lvBlockedURLs";
-            this.lvBlockedURLs.Size = new System.Drawing.Size(251, 95);
+            this.lvBlockedURLs.Size = new System.Drawing.Size(251, 56);
             this.lvBlockedURLs.TabIndex = 18;
+            this.lvBlockedURLs.SelectedIndexChanged += new System.EventHandler(this.lvBlockedURLs_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(24, 276);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(251, 23);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Add to Blacklist";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.BlacklistClick);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(404, 276);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(251, 23);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Add to Whitelist";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.WhitelistClick);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(404, 320);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(251, 23);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "Add Words to Whitelist";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.WhitelistWords);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(24, 320);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(251, 23);
+            this.button4.TabIndex = 21;
+            this.button4.Text = "Add Words to Blacklist";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // frmControlPanel
             // 
@@ -243,6 +293,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(679, 544);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lvBlockedURLs);
             this.Controls.Add(this.lvSuggestedURLs);
             this.Controls.Add(this.btnExit);
@@ -290,5 +344,9 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.ListBox lvSuggestedURLs;
         private System.Windows.Forms.ListBox lvBlockedURLs;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

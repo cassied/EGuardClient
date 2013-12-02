@@ -27,3 +27,22 @@ C:\Users\Lisa-Toshiba\Documents\Visual Studio 2010\Projects\EGuardClient\EGuardC
 C:\Users\Lisa-Toshiba\Documents\Visual Studio 2010\Projects\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.exe.manifest
 C:\Users\Lisa-Toshiba\Documents\Visual Studio 2010\Projects\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.application
 C:\Users\Lisa-Toshiba\Documents\Visual Studio 2010\Projects\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.csprojResolveAssemblyReference.cache
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\bin\Debug\EGuardClient.exe.config
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.exe
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.pdb
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\bin\Debug\EGuard.sdf
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\bin\Debug\EGuardClient.exe.manifest
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\bin\Debug\EGuardClient.application
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\bin\Debug\EGuardClient.exe
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\bin\Debug\EGuardClient.pdb
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.csprojResolveAssemblyReference.cache
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.frmControlPanel.resources
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.EGuardClientLogin.resources
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.Properties.Resources.resources
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.csproj.GenerateResource.Cache
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.exe.manifest
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.application
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.Blacklist.resources
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.Whitelist.resources
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.BlacklistWords.resources
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.WhitelistWords.resources

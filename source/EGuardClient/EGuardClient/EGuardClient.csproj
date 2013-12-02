@@ -89,10 +89,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlacklistWords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlacklistWords.Designer.cs">
+      <DependentUpon>BlacklistWords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WhitelistWords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WhitelistWords.Designer.cs">
+      <DependentUpon>WhitelistWords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Whitelist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Whitelist.Designer.cs">
+      <DependentUpon>Whitelist.cs</DependentUpon>
+    </Compile>
     <Compile Include="EGuardDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EGuardDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Blacklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blacklist.Designer.cs">
+      <DependentUpon>Blacklist.cs</DependentUpon>
     </Compile>
     <Compile Include="frmControlPanel.cs">
       <SubType>Form</SubType>
@@ -117,6 +141,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="URL.cs" />
     <Compile Include="UserRec.cs" />
+    <EmbeddedResource Include="Blacklist.resx">
+      <DependentUpon>Blacklist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlacklistWords.resx">
+      <DependentUpon>BlacklistWords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhitelistWords.resx">
+      <DependentUpon>WhitelistWords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Whitelist.resx">
+      <DependentUpon>Whitelist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmControlPanel.resx">
       <DependentUpon>frmControlPanel.cs</DependentUpon>
     </EmbeddedResource>
