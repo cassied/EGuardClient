@@ -1,15 +1,9 @@
-﻿/*
- * Created by SharpDevelop.
- * User: c623205
- * Date: 11/6/2013
- * Time: 2:56 PM
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace EGuardClient
 {
@@ -29,6 +23,23 @@ namespace EGuardClient
             // TODO: Add constructor code after the InitializeComponent() call.
             //
         }
+
+        void FillData()
+        {
+            SqlConnection conn = new SqlConnection("Server=localhost;Database=BlockedURLCat;");
+            conn.Open();
+
+                // use a SqlAdapter to execute the query
+                using (SqlDataAdapter a = new SqlDataAdapter("SELECT * FROM BlockedURL", conn))
+                {
+                    // fill a data table
+                    var t = new DataTable();
+                    a.Fill(t);
+
+                    // Bind the table to the list box
+                    listBox1.DataSource = t;
+                }
+            }
 
         void Button1Click(object sender, EventArgs e)
         {
@@ -73,7 +84,6 @@ namespace EGuardClient
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
     }
 }

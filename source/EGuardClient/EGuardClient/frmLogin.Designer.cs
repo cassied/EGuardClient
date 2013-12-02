@@ -150,6 +150,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EGuardClientLogin";
             this.Text = "EGuard Client Login";
+            this.Load += new System.EventHandler(this.EGuardClientLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

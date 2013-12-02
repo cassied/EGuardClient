@@ -35,5 +35,10 @@ namespace EGuardClient
             }
 
         }
+
+        private void EGuardClientLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,12 +30,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.blacklistWord = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.eGuardDataSet = new EGuardClient.EGuardDataSet();
+            this.eGuardDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.eGuardDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eGuardDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -94,6 +99,16 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Suggested Blacklisted Words";
             // 
+            // eGuardDataSet
+            // 
+            this.eGuardDataSet.DataSetName = "EGuardDataSet";
+            this.eGuardDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // eGuardDataSetBindingSource
+            // 
+            this.eGuardDataSetBindingSource.DataSource = this.eGuardDataSet;
+            this.eGuardDataSetBindingSource.Position = 0;
+            // 
             // BlacklistWords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -108,6 +123,8 @@
             this.Name = "BlacklistWords";
             this.Text = "Add to Blacklist";
             this.Load += new System.EventHandler(this.Blacklist_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.eGuardDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eGuardDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,5 +135,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label2;
+        private EGuardDataSet eGuardDataSet;
+        private System.Windows.Forms.BindingSource eGuardDataSetBindingSource;
     }
 }
