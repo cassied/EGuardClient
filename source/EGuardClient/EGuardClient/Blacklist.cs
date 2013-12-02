@@ -27,7 +27,7 @@ namespace EGuardClient
 
         void FillData()
         {
-                string constring = "Server=localhost;Database=BlockedURLCat;";
+                string constring = "Server=localhost;Database=BlockedURLCat.sql;";
                 string Query = "SELECT * FROM BlockedURL";
                 SqlConnection conDataBase = new SqlConnection(constring);
                 SqlCommand cmdDataBase = new SqlCommand(Query, conDataBase);

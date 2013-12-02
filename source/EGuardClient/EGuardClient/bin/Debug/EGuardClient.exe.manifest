@@ -54,10 +54,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>4cvn/sZq03Ad+gP320TArKoA6uM=</dsig:DigestValue>
+        <dsig:DigestValue>yixExyIc+R9t16C/NmaAdBp2+TU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="BlockedURLCat.sql" size="370">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>w93ywmQl3L1choOWjlyNYyyGdgA=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="EGuard.sdf" size="98304" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
