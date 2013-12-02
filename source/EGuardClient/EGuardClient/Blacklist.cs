@@ -26,19 +26,29 @@ namespace EGuardClient
 
         void FillData()
         {
-            SqlConnection conn = new SqlConnection("Server=localhost;Database=BlockedURLCat;");
-            conn.Open();
-
-                // use a SqlAdapter to execute the query
-                using (SqlDataAdapter a = new SqlDataAdapter("SELECT * FROM BlockedURL", conn))
+                string constring = "Server=localhost;Database=BlockedURLCat;";
+                string Query = "SELECT * FROM BlockedURL";
+                SqlConnection conDataBase = new SqlConnection(constring);
+                SqlCommand cmdDataBase = new SqlCommand(Query, conDataBase);
+                SqlDataReader myReader;
+                try
                 {
-                    // fill a data table
-                    var t = new DataTable();
-                    a.Fill(t);
+                    conDataBase.Open();
+                    myReader = cmdDataBase.ExecuteReader();
 
-                    // Bind the table to the list box
-                    listBox1.DataSource = t;
+                    while (myReader.Read())
+                    {
+                        string sURL = myReader.GetString(0);
+                        listBox1.Items.Add(sURL);
+                        MessageBox.Show(sURL);
+
+                    }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
             }
 
         void Button1Click(object sender, EventArgs e)
