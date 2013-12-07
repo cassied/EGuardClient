@@ -153,12 +153,12 @@ namespace EGuardClient
         private void btnExit_Click(object sender, EventArgs e)
         {
             
-            //lvBlockedURLs.Items.Clear();
-            //this.Close();
             lvBlockedURLs.Items.Clear();
-            this.Hide();
-            Whitelist wl = new Whitelist();
-            wl.Show();
+            this.Close();
+            //lvBlockedURLs.Items.Clear();
+            //this.Hide();
+            //Whitelist wl = new Whitelist();
+            //wl.Show();
 
             
             

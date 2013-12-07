@@ -95,6 +95,18 @@
     <Compile Include="BlacklistWords.Designer.cs">
       <DependentUpon>BlacklistWords.cs</DependentUpon>
     </Compile>
+    <Compile Include="BlockedCat.cs" />
+    <Compile Include="BlockedCatDB.cs" />
+    <Compile Include="BlockedCatList.cs" />
+    <Compile Include="BlockedURL.cs" />
+    <Compile Include="BlockedURLDB.cs" />
+    <Compile Include="BlockedURLList.cs" />
+    <Compile Include="SuggestedCat.cs" />
+    <Compile Include="SuggestedCatDB.cs" />
+    <Compile Include="SuggestedCatList.cs" />
+    <Compile Include="SuggestedURL.cs" />
+    <Compile Include="SuggestedURLDB.cs" />
+    <Compile Include="SuggestedURLList.cs" />
     <Compile Include="WhitelistWords.cs">
       <SubType>Form</SubType>
     </Compile>
