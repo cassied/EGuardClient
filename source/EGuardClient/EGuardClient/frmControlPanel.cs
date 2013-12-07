@@ -212,6 +212,26 @@ namespace EGuardClient
 
         }
 
+        private void btnAddURL_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            BlockedURL u = new BlockedURL();
+            u.blockedURL = txtNewURL.Text.ToString();
+            blockedurls.Save(u);
+            blockedurls.Fill();
+            FillBlockedURLListBox();
+            //suggestedurls.Fill();
+            FillSuggestedURLListBox();
+
+            String path = @"C:\Windows\System32\drivers\etc\hosts";
+            StreamWriter sw = new StreamWriter(path, true);
+            string blacklistedURL = "\n127.0.0.1 " + u.blockedURL;
+            String sitetoblock = blacklistedURL;
+            sw.Write(sitetoblock);
+            sw.Close();
+            MessageBox.Show("The new URL has been added to the Blacklist.");
+        }
+
 
     }
 }
