@@ -245,6 +245,7 @@
             this.lvSuggestedURLs.Name = "lvSuggestedURLs";
             this.lvSuggestedURLs.Size = new System.Drawing.Size(244, 95);
             this.lvSuggestedURLs.TabIndex = 18;
+            this.lvSuggestedURLs.SelectedIndexChanged += new System.EventHandler(this.lvSuggestedURLs_SelectedIndexChanged);
             // 
             // lvSuggestedCats
             // 

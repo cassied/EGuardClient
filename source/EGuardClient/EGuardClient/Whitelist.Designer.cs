@@ -61,6 +61,7 @@ namespace EGuardClient
             this.whitelistURL.Name = "whitelistURL";
             this.whitelistURL.Size = new System.Drawing.Size(211, 20);
             this.whitelistURL.TabIndex = 1;
+            this.whitelistURL.TextChanged += new System.EventHandler(this.whitelistURL_TextChanged);
             // 
             // button1
             // 

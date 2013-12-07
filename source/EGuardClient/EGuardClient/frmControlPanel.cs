@@ -8,6 +8,9 @@ using System.Text;
 using System.Windows.Forms;
 using System.Threading.Tasks;
 using System.Data.SqlServerCe;
+using System.IO;
+using System.Data.SqlClient;
+using System.Data;
 
 
 namespace EGuardClient
@@ -131,6 +134,13 @@ namespace EGuardClient
             suggestedurls.Fill();
             FillSuggestedURLListBox();
 
+            String path = @"C:\Windows\System32\drivers\etc\hosts";
+            StreamWriter sw = new StreamWriter(path, true);
+            string blacklistedURL = "\n127.0.0.1 " + u.blockedURL;
+            String sitetoblock = blacklistedURL;
+            sw.Write(sitetoblock);
+            sw.Close();
+            MessageBox.Show("The URL has been added to the Blacklist.");
 
         }
         private void btnRemoveBlock_Click(object sender, EventArgs e)
@@ -141,8 +151,11 @@ namespace EGuardClient
                 u.blockedURL = lvBlockedURLs.SelectedItems[i].ToString();
                 //blockedurls -= u;
                 blockedurls.Delete(u);
-               
 
+                string text = File.ReadAllText(@"C:\Windows\System32\drivers\etc\hosts");
+                text = text.Replace("127.0.0.1 " + u.blockedURL, string.Empty);
+                File.WriteAllText(@"C:\Windows\System32\drivers\etc\hosts", text);
+                MessageBox.Show("The URL has been removed from the Blacklist.");
             }
 
             blockedurls.Fill();
@@ -192,6 +205,11 @@ namespace EGuardClient
             FillBlockedCatListBox();
             suggestedcats.Fill();
             FillSuggestedCatListBox();
+        }
+
+        private void lvSuggestedURLs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
 

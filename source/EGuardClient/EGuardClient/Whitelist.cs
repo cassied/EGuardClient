@@ -59,5 +59,10 @@ namespace EGuardClient
 
             listBox1.DataSource = result;
         }
+
+        private void whitelistURL_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
