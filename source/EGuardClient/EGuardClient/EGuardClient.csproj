@@ -101,6 +101,18 @@
     <Compile Include="BlockedURL.cs" />
     <Compile Include="BlockedURLDB.cs" />
     <Compile Include="BlockedURLList.cs" />
+    <Compile Include="CAT_frmControlPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CAT_frmControlPanel.Designer.cs">
+      <DependentUpon>CAT_frmControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="URL_frmControlPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="URL_frmControlPanel.Designer.cs">
+      <DependentUpon>URL_frmControlPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="SuggestedCat.cs" />
     <Compile Include="SuggestedCatDB.cs" />
     <Compile Include="SuggestedCatList.cs" />
@@ -158,6 +170,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BlacklistWords.resx">
       <DependentUpon>BlacklistWords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CAT_frmControlPanel.resx">
+      <DependentUpon>CAT_frmControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="URL_frmControlPanel.resx">
+      <DependentUpon>URL_frmControlPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WhitelistWords.resx">
       <DependentUpon>WhitelistWords.cs</DependentUpon>

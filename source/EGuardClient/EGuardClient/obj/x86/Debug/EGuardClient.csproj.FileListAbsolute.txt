@@ -65,3 +65,5 @@ C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardCl
 C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.csproj.GenerateResource.Cache
 C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.exe.manifest
 C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.application
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.CAT_frmControlPanel.resources
+C:\Users\Cassie\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.URL_frmControlPanel.resources

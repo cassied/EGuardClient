@@ -56,6 +56,8 @@
             this.txtNewURL = new System.Windows.Forms.TextBox();
             this.btnAddURL = new System.Windows.Forms.Button();
             this.lblNewURL = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEnd)).BeginInit();
@@ -64,7 +66,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(256, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(268, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(126, 130);
             this.pictureBox1.TabIndex = 0;
@@ -74,7 +76,7 @@
             // 
             this.lblURLs.AutoSize = true;
             this.lblURLs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblURLs.Location = new System.Drawing.Point(253, 172);
+            this.lblURLs.Location = new System.Drawing.Point(265, 168);
             this.lblURLs.Name = "lblURLs";
             this.lblURLs.Size = new System.Drawing.Size(136, 17);
             this.lblURLs.TabIndex = 1;
@@ -103,7 +105,7 @@
             // btnBlock
             // 
             this.btnBlock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBlock.Location = new System.Drawing.Point(302, 237);
+            this.btnBlock.Location = new System.Drawing.Point(297, 232);
             this.btnBlock.Name = "btnBlock";
             this.btnBlock.Size = new System.Drawing.Size(75, 23);
             this.btnBlock.TabIndex = 6;
@@ -114,7 +116,7 @@
             // btnRemoveBlock
             // 
             this.btnRemoveBlock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveBlock.Location = new System.Drawing.Point(302, 261);
+            this.btnRemoveBlock.Location = new System.Drawing.Point(297, 261);
             this.btnRemoveBlock.Name = "btnRemoveBlock";
             this.btnRemoveBlock.Size = new System.Drawing.Size(75, 23);
             this.btnRemoveBlock.TabIndex = 7;
@@ -236,7 +238,7 @@
             // lvBlockedURLs
             // 
             this.lvBlockedURLs.FormattingEnabled = true;
-            this.lvBlockedURLs.Location = new System.Drawing.Point(398, 224);
+            this.lvBlockedURLs.Location = new System.Drawing.Point(402, 224);
             this.lvBlockedURLs.Name = "lvBlockedURLs";
             this.lvBlockedURLs.Size = new System.Drawing.Size(244, 95);
             this.lvBlockedURLs.TabIndex = 17;
@@ -253,7 +255,7 @@
             // lvSuggestedCats
             // 
             this.lvSuggestedCats.FormattingEnabled = true;
-            this.lvSuggestedCats.Location = new System.Drawing.Point(25, 415);
+            this.lvSuggestedCats.Location = new System.Drawing.Point(21, 415);
             this.lvSuggestedCats.Name = "lvSuggestedCats";
             this.lvSuggestedCats.Size = new System.Drawing.Size(244, 95);
             this.lvSuggestedCats.TabIndex = 19;
@@ -269,7 +271,7 @@
             // btnUnblockCat
             // 
             this.btnUnblockCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUnblockCat.Location = new System.Drawing.Point(311, 459);
+            this.btnUnblockCat.Location = new System.Drawing.Point(297, 459);
             this.btnUnblockCat.Name = "btnUnblockCat";
             this.btnUnblockCat.Size = new System.Drawing.Size(75, 23);
             this.btnUnblockCat.TabIndex = 22;
@@ -280,7 +282,7 @@
             // btnBlockCat
             // 
             this.btnBlockCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBlockCat.Location = new System.Drawing.Point(311, 435);
+            this.btnBlockCat.Location = new System.Drawing.Point(297, 430);
             this.btnBlockCat.Name = "btnBlockCat";
             this.btnBlockCat.Size = new System.Drawing.Size(75, 23);
             this.btnBlockCat.TabIndex = 21;
@@ -320,7 +322,7 @@
             // 
             // txtNewURL
             // 
-            this.txtNewURL.Location = new System.Drawing.Point(271, 326);
+            this.txtNewURL.Location = new System.Drawing.Point(268, 337);
             this.txtNewURL.Name = "txtNewURL";
             this.txtNewURL.Size = new System.Drawing.Size(283, 20);
             this.txtNewURL.TabIndex = 26;
@@ -328,7 +330,7 @@
             // btnAddURL
             // 
             this.btnAddURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddURL.Location = new System.Drawing.Point(560, 326);
+            this.btnAddURL.Location = new System.Drawing.Point(560, 335);
             this.btnAddURL.Name = "btnAddURL";
             this.btnAddURL.Size = new System.Drawing.Size(86, 23);
             this.btnAddURL.TabIndex = 27;
@@ -340,11 +342,33 @@
             // 
             this.lblNewURL.AutoSize = true;
             this.lblNewURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewURL.Location = new System.Drawing.Point(21, 329);
+            this.lblNewURL.Location = new System.Drawing.Point(18, 340);
             this.lblNewURL.Name = "lblNewURL";
             this.lblNewURL.Size = new System.Drawing.Size(244, 13);
             this.lblNewURL.TabIndex = 28;
             this.lblNewURL.Text = "Specify new blocked URL (ie.: abc.om)-->";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(297, 296);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Test";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.test_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(297, 488);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "Test";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.CatMGT_Click);
             // 
             // frmControlPanel
             // 
@@ -352,6 +376,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(679, 750);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblNewURL);
             this.Controls.Add(this.btnAddURL);
             this.Controls.Add(this.txtNewURL);
@@ -420,5 +446,7 @@
         private System.Windows.Forms.TextBox txtNewURL;
         private System.Windows.Forms.Button btnAddURL;
         private System.Windows.Forms.Label lblNewURL;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

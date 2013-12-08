@@ -15,9 +15,9 @@ using System.Data;
 
 namespace EGuardClient
 {
-    public partial class frmControlPanel : Form
+    public partial class URL_frmControlPanel : Form
     {
-        public frmControlPanel()
+        public URL_frmControlPanel()
         {
             InitializeComponent();
         }
@@ -31,20 +31,12 @@ namespace EGuardClient
         {
             blockedurls.Changed += new BlockedURLList.ChangeHandler(HandleBlockedChange);
             suggestedurls.Changed += new SuggestedURLList.ChangeHandler(HandleSuggestedChange);
-            blockedcats.Changed += new BlockedCatList.ChangeHandler(HandleBlockedCatChange);
-            suggestedcats.Changed += new SuggestedCatList.ChangeHandler(HandleSuggestedCatChange);
-
 
             blockedurls.Fill();
             FillBlockedURLListBox();
             suggestedurls.Fill();
             FillSuggestedURLListBox();
-
-            blockedcats.Fill();
-            FillBlockedCatListBox();
-            suggestedcats.Fill();
-            FillSuggestedCatListBox();
-
+            
         }
 
         private void FillBlockedURLListBox()
@@ -86,43 +78,6 @@ namespace EGuardClient
             FillSuggestedURLListBox();
         }
 
-        private void FillBlockedCatListBox()
-        {
-            BlockedCat u;
-
-            lvBlockedCats.Items.Clear();
-            for (int i = 0; i < blockedcats.Count; i++)
-            {
-                u = blockedcats[i];
-                lvBlockedCats.Items.Add(u.GetDisplayText());
-            }
-        }
-
-        private void HandleBlockedCatChange(BlockedCatList blockedcats)
-        {
-            blockedcats.Save();
-            FillBlockedCatListBox();
-
-        }
-
-        private void FillSuggestedCatListBox()
-        {
-            SuggestedCat u;
-
-            lvSuggestedCats.Items.Clear();
-
-            for (int i = 0; i < suggestedcats.Count; i++)
-            {
-                u = suggestedcats[i];
-                lvSuggestedCats.Items.Add(u.GetDisplayText());
-            }
-        }
-
-        private void HandleSuggestedCatChange(SuggestedCatList suggestedcats)
-        {
-            suggestedcats.Save();
-            FillSuggestedCatListBox();
-        }
         private void btnBlock_Click(object sender, EventArgs e)
         {
             int i = 0;
@@ -167,44 +122,8 @@ namespace EGuardClient
         {
             
             lvBlockedURLs.Items.Clear();
-            this.Close();
-            //lvBlockedURLs.Items.Clear();
-            //this.Hide();
-            //Whitelist wl = new Whitelist();
-            //wl.Show();
-
+            this.Close();                
             
-            
-        }
-
-        private void btnBlockCat_Click(object sender, EventArgs e)
-        {
-            int i = 0;
-            BlockedCat u = new BlockedCat();
-            u.blockedCat = lvSuggestedCats.SelectedItems[i].ToString();
-            blockedcats.Save(u);
-            blockedcats.Fill();
-            FillBlockedCatListBox();
-            suggestedcats.Fill();
-            FillSuggestedCatListBox();
-
-        }
-
-        private void btnUnblockCat_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < lvBlockedCats.SelectedItems.Count; i++)
-            {
-                BlockedCat u = new BlockedCat();
-                u.blockedCat = lvBlockedCats.SelectedItems[i].ToString();
-                blockedcats.Delete(u);
-
-
-            }
-
-            blockedcats.Fill();
-            FillBlockedCatListBox();
-            suggestedcats.Fill();
-            FillSuggestedCatListBox();
         }
 
         private void lvSuggestedURLs_SelectedIndexChanged(object sender, EventArgs e)
@@ -232,16 +151,9 @@ namespace EGuardClient
             MessageBox.Show("The new URL has been added to the Blacklist.");
         }
 
-        private void test_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            URL_frmControlPanel url = new URL_frmControlPanel();
-            url.Show();
-        }
 
-        private void CatMGT_Click(object sender, EventArgs e)
-        {
-            CAT_frmControlPanel cat = new CAT_frmControlPanel();
-            cat.Show();
         }
 
 
