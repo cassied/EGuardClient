@@ -11,6 +11,7 @@ using System.Data.SqlServerCe;
 using System.IO;
 using System.Data.SqlClient;
 using System.Data;
+using System.Collections;
 
 
 namespace EGuardClient
@@ -44,6 +45,8 @@ namespace EGuardClient
             FillBlockedCatListBox();
             suggestedcats.Fill();
             FillSuggestedCatListBox();
+
+            FillTimeControlSettings();
 
         }
 
@@ -243,6 +246,78 @@ namespace EGuardClient
             CAT_frmControlPanel cat = new CAT_frmControlPanel();
             cat.Show();
         }
+
+        private void btnTimeControl_Click(object sender, EventArgs e)
+        {
+            String path = @"C:\\Program Files (x86)\\UM-D\\EGuard Client\\TimeControlSettings.txt";
+            StreamWriter sw = new StreamWriter(path, false);
+
+            // Get start time
+            //String startTime = comboBoxStartTime.GetItemText(this.comboBoxStartTime.SelectedItem);
+            String startTime = timeStart.Value.ToString();
+
+            // Get end time
+            //String endTime = comboBoxEndTime.GetItemText(this.comboBoxEndTime.SelectedItem);
+            String endTime = timeEnd.Value.ToString() + "\r\n";
+
+            // Get the days of the week
+            IEnumerator myEnumerator;
+            myEnumerator = checkedListBox1.CheckedIndices.GetEnumerator();
+            int y;
+            String weekDays = ",";
+            while (myEnumerator.MoveNext() != false)
+            {
+                y = (int)myEnumerator.Current;
+                //checkedListBox1.SetItemChecked(y, false);
+                if (checkedListBox1.GetItemCheckState(y) == CheckState.Checked)
+                {
+                    weekDays += checkedListBox1.GetItemText(myEnumerator.Current) + ",";
+                }
+
+            }
+
+            sw.Write(startTime + "," + endTime + weekDays);
+            sw.Close();
+            MessageBox.Show("The new Time Control settings have been saved.");
+
+        }
+
+        private void FillTimeControlSettings()
+        {
+            String startEndTimesFromFile;
+            String daysOfWeekFromFile;
+
+            // Read the file and display it line by line.
+            System.IO.StreamReader file =
+                new System.IO.StreamReader(@"C:\\Program Files (x86)\\UM-D\\EGuard Client\\TimeControlSettings.txt");
+
+            startEndTimesFromFile = file.ReadLine();
+            daysOfWeekFromFile = file.ReadLine();
+
+            // Close file
+            file.Close();
+
+            String[] startEndTime = startEndTimesFromFile.Split(new char[] { ',' });
+            String[] daysOfWeek = daysOfWeekFromFile.Split(new char[] { ',' });
+
+            // Fill start time
+            timeStart.Value = Convert.ToDecimal(startEndTime[0]);
+            // Fill end time
+            timeEnd.Value = Convert.ToDecimal(startEndTime[1]);
+
+            int index;
+            // Fill days of the week
+            foreach (String element in daysOfWeek)
+            {
+                if (element != "")
+                {
+                    index = Convert.ToInt32(element);
+                    checkedListBox1.SetItemCheckState(index, CheckState.Checked);
+                }
+            }
+
+        }
+
 
     }
 }

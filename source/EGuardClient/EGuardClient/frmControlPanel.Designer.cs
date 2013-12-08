@@ -223,6 +223,7 @@
             this.btnTimeControl.TabIndex = 15;
             this.btnTimeControl.Text = "Save Day/Time";
             this.btnTimeControl.UseVisualStyleBackColor = true;
+            this.btnTimeControl.Click += new System.EventHandler(this.btnTimeControl_Click);
             // 
             // btnExit
             // 
