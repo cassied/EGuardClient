@@ -244,6 +244,5 @@ namespace EGuardClient
             cat.Show();
         }
 
-
     }
 }

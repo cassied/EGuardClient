@@ -271,7 +271,7 @@
             // btnUnblockCat
             // 
             this.btnUnblockCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUnblockCat.Location = new System.Drawing.Point(297, 459);
+            this.btnUnblockCat.Location = new System.Drawing.Point(297, 450);
             this.btnUnblockCat.Name = "btnUnblockCat";
             this.btnUnblockCat.Size = new System.Drawing.Size(75, 23);
             this.btnUnblockCat.TabIndex = 22;
@@ -282,7 +282,7 @@
             // btnBlockCat
             // 
             this.btnBlockCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBlockCat.Location = new System.Drawing.Point(297, 430);
+            this.btnBlockCat.Location = new System.Drawing.Point(297, 421);
             this.btnBlockCat.Name = "btnBlockCat";
             this.btnBlockCat.Size = new System.Drawing.Size(75, 23);
             this.btnBlockCat.TabIndex = 21;
@@ -351,7 +351,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(297, 296);
+            this.button1.Location = new System.Drawing.Point(297, 290);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 29;
@@ -362,7 +362,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(297, 488);
+            this.button2.Location = new System.Drawing.Point(297, 479);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 30;
