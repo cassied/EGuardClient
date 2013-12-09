@@ -249,7 +249,7 @@ namespace EGuardClient
 
         private void btnTimeControl_Click(object sender, EventArgs e)
         {
-            String path = @"C:\\Program Files (x86)\\UM-D\\EGuard Client\\TimeControlSettings.txt";
+            String path = @"C:\\Temp\\TimeControlSettings.txt";
             StreamWriter sw = new StreamWriter(path, false);
 
             // Get start time
@@ -284,12 +284,35 @@ namespace EGuardClient
 
         private void FillTimeControlSettings()
         {
+            string fileName = "TimeControlSettings.txt";
+            string sourcePath = @".\";
+            string targetPath = @"C:\Temp";
+
+            // Use Path class to manipulate file and directory paths. 
+            string sourceFile = System.IO.Path.Combine(sourcePath, fileName);
+            string destFile = System.IO.Path.Combine(targetPath, fileName);
+
+            // To copy a folder's contents to a new location: 
+            // Create a new target folder, if necessary. 
+            if (!System.IO.Directory.Exists(targetPath))
+            {
+                System.IO.Directory.CreateDirectory(targetPath);
+
+                if (!System.IO.File.Exists(destFile))
+                {
+                    // To copy a file to another location and  
+                    // overwrite the destination file if it already exists.
+                    System.IO.File.Copy(sourceFile, destFile, true);
+                }
+            }          
+            
+            // Get Seetings from file and fill the form
             String startEndTimesFromFile;
             String daysOfWeekFromFile;
 
             // Read the file and display it line by line.
             System.IO.StreamReader file =
-                new System.IO.StreamReader(@"C:\\Program Files (x86)\\UM-D\\EGuard Client\\TimeControlSettings.txt");
+                new System.IO.StreamReader(destFile);
 
             startEndTimesFromFile = file.ReadLine();
             daysOfWeekFromFile = file.ReadLine();
