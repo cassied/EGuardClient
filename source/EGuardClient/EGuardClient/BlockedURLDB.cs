@@ -8,6 +8,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.Data;
+using System.Text.RegularExpressions;
 
 namespace EGuardClient
 {
@@ -19,22 +20,23 @@ namespace EGuardClient
         {
           
             List<BlockedURL> blockedurls = new List<BlockedURL>();
-
+ 
             SqlCeConnection connection = new SqlCeConnection(System.Configuration.ConfigurationManager.ConnectionStrings["Connection"].ConnectionString.ToString());
             SqlCeCommand cmd = new SqlCeCommand();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "SELECT BlockedURL FROM BlockedURLCat WHERE BlockedURL IS NOT NULL ORDER BY BlockedURL;";
+            cmd.CommandText = "SELECT BlockedURL+'-'+BlockedCat FROM BlockedURLCat WHERE BlockedURL IS NOT NULL ORDER BY BlockedURL;";
             
             cmd.Connection = connection;
 
             cmd.Connection.Open();
             SqlCeDataReader rdr = cmd.ExecuteReader();
-            while (rdr.Read())
+            while (rdr.Read())  
             {
+
                 BlockedURL blockedurl = new BlockedURL();
                 blockedurl.blockedURL = rdr.GetValue(0).ToString();
                 blockedurls.Add(blockedurl);
-            }
+            }                                                                                                                                                                                                                   
 
             cmd.Connection.Close();
             cmd.Connection.Dispose();
@@ -53,11 +55,16 @@ namespace EGuardClient
             cmd.Connection = connection;
 
             String url = string.Empty;
+            String cat = string.Empty;
 
             try
             {
+                string[] values = u.blockedURL.ToString().Split('-');
+                url = values[0];
+                cat = values[1];
+                
                 cmd.Connection.Open();
-                cmd.CommandText = "DELETE FROM BlockedURLCat WHERE BlockedURL='" + u.blockedURL + "';";
+                cmd.CommandText = "DELETE FROM BlockedURLCat WHERE BlockedURL='" + url + "';";
                 cmd.ExecuteNonQuery();
 
             }
@@ -75,17 +82,26 @@ namespace EGuardClient
             cmd.Connection = connection;
 
             String url = string.Empty;
+            String cat = string.Empty;
 
             try
             {
                 cmd.Connection.Open();
-                cmd.CommandText = "INSERT INTO BlockedURLCat (BlockedURL,BlockedCat) VALUES ('" + u.blockedURL + "', null);";                
+                string[] values = u.blockedURL.ToString().Split('-');
+                url = values[0];
+                cat = values[1];
+                url = url.Replace("www.", "");
+                url = url.Replace("http://", "");
+
+                cmd.CommandText = "INSERT INTO BlockedURLCat (BlockedURL,BlockedCat) VALUES ('" + url + "','" + cat + "');";
                 cmd.ExecuteNonQuery();
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
+
+
             }
                
           }
@@ -98,6 +114,8 @@ namespace EGuardClient
             cmd.Connection = connection;
 
             String url = string.Empty;
+            String cat = string.Empty;
+            string[] values;
 
             try
             {
@@ -107,7 +125,9 @@ namespace EGuardClient
 
                 foreach (BlockedURL u in blockedurls)
                 {
-                    cmd.CommandText = "INSERT INTO BlockedURLCat (BlockedURL,BlockedCat) VALUES ('" + u.blockedURL.ToString() + "', null);";                
+                    values = u.blockedURL.ToString().Split('-');
+
+                    cmd.CommandText = "INSERT INTO BlockedURLCat (BlockedURL,BlockedCat) VALUES ('" + url + "'," + cat + "');";                
                     cmd.ExecuteNonQuery();
                }
             }

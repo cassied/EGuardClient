@@ -107,6 +107,18 @@
     <Compile Include="CAT_frmControlPanel.Designer.cs">
       <DependentUpon>CAT_frmControlPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TC_frmControlPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TC_frmControlPanel.Designer.cs">
+      <DependentUpon>TC_frmControlPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="URL_frmControlPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +185,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CAT_frmControlPanel.resx">
       <DependentUpon>CAT_frmControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TC_frmControlPanel.resx">
+      <DependentUpon>TC_frmControlPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="URL_frmControlPanel.resx">
       <DependentUpon>URL_frmControlPanel.cs</DependentUpon>

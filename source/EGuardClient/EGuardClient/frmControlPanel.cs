@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Data.SqlServerCe;
 using System.IO;
 using System.Data.SqlClient;
-using System.Data;
 using System.Collections;
 
 
@@ -30,6 +29,8 @@ namespace EGuardClient
 
         private void frmControlPanel_Load(object sender, EventArgs e)
         {
+            
+
             blockedurls.Changed += new BlockedURLList.ChangeHandler(HandleBlockedChange);
             suggestedurls.Changed += new SuggestedURLList.ChangeHandler(HandleSuggestedChange);
             blockedcats.Changed += new BlockedCatList.ChangeHandler(HandleBlockedCatChange);
@@ -43,10 +44,13 @@ namespace EGuardClient
 
             blockedcats.Fill();
             FillBlockedCatListBox();
+
             suggestedcats.Fill();
             FillSuggestedCatListBox();
+           
 
             FillTimeControlSettings();
+           
 
         }
 
@@ -110,6 +114,7 @@ namespace EGuardClient
 
         private void FillSuggestedCatListBox()
         {
+ 
             SuggestedCat u;
 
             lvSuggestedCats.Items.Clear();
@@ -137,9 +142,11 @@ namespace EGuardClient
             suggestedurls.Fill();
             FillSuggestedURLListBox();
 
+            string[] values = u.blockedURL.ToString().Split('-');
+
             String path = @"C:\Windows\System32\drivers\etc\hosts";
             StreamWriter sw = new StreamWriter(path, true);
-            string blacklistedURL = "\n127.0.0.1 " + u.blockedURL;
+            string blacklistedURL = "\n127.0.0.1 " + values[0];
             String sitetoblock = blacklistedURL;
             sw.Write(sitetoblock);
             sw.Close();
@@ -155,8 +162,10 @@ namespace EGuardClient
                 //blockedurls -= u;
                 blockedurls.Delete(u);
 
+                string[] values = u.blockedURL.ToString().Split('-');
+
                 string text = File.ReadAllText(@"C:\Windows\System32\drivers\etc\hosts");
-                text = text.Replace("127.0.0.1 " + u.blockedURL, string.Empty);
+                text = text.Replace("127.0.0.1 " + values[0], string.Empty);
                 File.WriteAllText(@"C:\Windows\System32\drivers\etc\hosts", text);
                 MessageBox.Show("The URL has been removed from the Blacklist.");
             }
@@ -182,15 +191,16 @@ namespace EGuardClient
 
         private void btnBlockCat_Click(object sender, EventArgs e)
         {
-            int i = 0;
-            BlockedCat u = new BlockedCat();
-            u.blockedCat = lvSuggestedCats.SelectedItems[i].ToString();
-            blockedcats.Save(u);
-            blockedcats.Fill();
-            FillBlockedCatListBox();
-            suggestedcats.Fill();
-            FillSuggestedCatListBox();
 
+                int i = 0;
+                BlockedCat u = new BlockedCat();
+                u.blockedCat = lvSuggestedCats.SelectedItems[i].ToString();
+                blockedcats.Save(u);
+                blockedcats.Fill();
+                FillBlockedCatListBox();
+                suggestedcats.Fill();
+                FillSuggestedCatListBox();
+        
         }
 
         private void btnUnblockCat_Click(object sender, EventArgs e)

@@ -23,7 +23,7 @@ namespace EGuardClient
             SqlCeConnection connection = new SqlCeConnection(System.Configuration.ConfigurationManager.ConnectionStrings["Connection"].ConnectionString.ToString());
             SqlCeCommand cmd = new SqlCeCommand();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "SELECT BlockedCat FROM BlockedURLCat WHERE BlockedCat IS NOT NULL ORDER BY BlockedCat;";
+            cmd.CommandText = "SELECT CategoryName FROM BlockedCat WHERE CategoryName IS NOT NULL ORDER BY CategoryName;";
             
             cmd.Connection = connection;
 
@@ -52,14 +52,15 @@ namespace EGuardClient
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.Connection = connection;
 
-            String url = string.Empty;
+
 
             try
             {
                 cmd.Connection.Open();
-                cmd.CommandText = "DELETE FROM BlockedURLCat WHERE BlockedCat='" + u.blockedCat + "';";
+                cmd.CommandText = "DELETE FROM BlockedCat WHERE CategoryName='" + u.blockedCat + "';";
                 cmd.ExecuteNonQuery();
-
+                cmd.Connection.Close();
+               
             }
             catch (Exception ex)
             {
@@ -79,7 +80,7 @@ namespace EGuardClient
             try
             {
                 cmd.Connection.Open();
-                cmd.CommandText = "INSERT INTO BlockedURLCat (BlockedURL,BlockedCat) VALUES (null,'" + u.blockedCat + "');";                
+                cmd.CommandText = "INSERT INTO BlockedCat (CategoryName) VALUES ('" + u.blockedCat + "');";                
                 cmd.ExecuteNonQuery();
 
             }
@@ -107,13 +108,14 @@ namespace EGuardClient
 
                 foreach (BlockedCat u in blockedcats)
                 {
-                    cmd.CommandText = "INSERT INTO BlockedURLCat (BlockedURL,BlockedCat) VALUES (null,'" + u.blockedCat.ToString() + "');";                
+                    cmd.CommandText = "INSERT INTO BlockedCat (CategoryName) VALUES ('"+u.blockedCat.ToString() + "');";                
                     cmd.ExecuteNonQuery();
                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
+      
             }
                
           }

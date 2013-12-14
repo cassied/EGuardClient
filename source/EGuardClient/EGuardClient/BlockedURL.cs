@@ -14,6 +14,7 @@ namespace EGuardClient
         public BlockedURL(string blockedurl)
         {
             this.blockedURL = blockedurl;
+
         }
 
         public string blockedURL

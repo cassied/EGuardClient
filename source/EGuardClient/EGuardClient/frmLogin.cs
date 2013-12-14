@@ -25,8 +25,8 @@ namespace EGuardClient
             if (authenticated == true)
             {
                 this.Hide();
-                frmControlPanel frmControlPanel = new frmControlPanel();
-                frmControlPanel.Show();
+                frmMenu frmMenu = new frmMenu();
+                frmMenu.Show();
             }
             else
             {            

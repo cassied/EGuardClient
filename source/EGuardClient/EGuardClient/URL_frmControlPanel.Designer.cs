@@ -41,6 +41,9 @@
             this.txtNewURL = new System.Windows.Forms.TextBox();
             this.btnAddURL = new System.Windows.Forms.Button();
             this.lblNewURL = new System.Windows.Forms.Label();
+            this.lblCat = new System.Windows.Forms.Label();
+            this.lvBlockedCats = new System.Windows.Forms.ListBox();
+            this.btnMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +61,7 @@
             // 
             this.lblURLs.AutoSize = true;
             this.lblURLs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblURLs.Location = new System.Drawing.Point(265, 168);
+            this.lblURLs.Location = new System.Drawing.Point(265, 157);
             this.lblURLs.Name = "lblURLs";
             this.lblURLs.Size = new System.Drawing.Size(136, 17);
             this.lblURLs.TabIndex = 1;
@@ -68,7 +71,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 206);
+            this.label1.Location = new System.Drawing.Point(68, 185);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 13);
             this.label1.TabIndex = 3;
@@ -78,7 +81,7 @@
             // 
             this.lblBlockedURLs.AutoSize = true;
             this.lblBlockedURLs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBlockedURLs.Location = new System.Drawing.Point(466, 206);
+            this.lblBlockedURLs.Location = new System.Drawing.Point(466, 185);
             this.lblBlockedURLs.Name = "lblBlockedURLs";
             this.lblBlockedURLs.Size = new System.Drawing.Size(88, 13);
             this.lblBlockedURLs.TabIndex = 5;
@@ -87,7 +90,7 @@
             // btnBlock
             // 
             this.btnBlock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBlock.Location = new System.Drawing.Point(297, 232);
+            this.btnBlock.Location = new System.Drawing.Point(297, 211);
             this.btnBlock.Name = "btnBlock";
             this.btnBlock.Size = new System.Drawing.Size(75, 23);
             this.btnBlock.TabIndex = 6;
@@ -98,7 +101,7 @@
             // btnRemoveBlock
             // 
             this.btnRemoveBlock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveBlock.Location = new System.Drawing.Point(297, 261);
+            this.btnRemoveBlock.Location = new System.Drawing.Point(297, 240);
             this.btnRemoveBlock.Name = "btnRemoveBlock";
             this.btnRemoveBlock.Size = new System.Drawing.Size(75, 23);
             this.btnRemoveBlock.TabIndex = 7;
@@ -109,7 +112,7 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(297, 380);
+            this.btnExit.Location = new System.Drawing.Point(24, 468);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 16;
@@ -120,7 +123,7 @@
             // lvBlockedURLs
             // 
             this.lvBlockedURLs.FormattingEnabled = true;
-            this.lvBlockedURLs.Location = new System.Drawing.Point(402, 224);
+            this.lvBlockedURLs.Location = new System.Drawing.Point(402, 203);
             this.lvBlockedURLs.Name = "lvBlockedURLs";
             this.lvBlockedURLs.Size = new System.Drawing.Size(244, 95);
             this.lvBlockedURLs.TabIndex = 17;
@@ -128,7 +131,7 @@
             // lvSuggestedURLs
             // 
             this.lvSuggestedURLs.FormattingEnabled = true;
-            this.lvSuggestedURLs.Location = new System.Drawing.Point(21, 224);
+            this.lvSuggestedURLs.Location = new System.Drawing.Point(21, 203);
             this.lvSuggestedURLs.Name = "lvSuggestedURLs";
             this.lvSuggestedURLs.Size = new System.Drawing.Size(244, 95);
             this.lvSuggestedURLs.TabIndex = 18;
@@ -136,15 +139,15 @@
             // 
             // txtNewURL
             // 
-            this.txtNewURL.Location = new System.Drawing.Point(268, 337);
+            this.txtNewURL.Location = new System.Drawing.Point(24, 329);
             this.txtNewURL.Name = "txtNewURL";
-            this.txtNewURL.Size = new System.Drawing.Size(283, 20);
+            this.txtNewURL.Size = new System.Drawing.Size(248, 20);
             this.txtNewURL.TabIndex = 26;
             // 
             // btnAddURL
             // 
             this.btnAddURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddURL.Location = new System.Drawing.Point(560, 335);
+            this.btnAddURL.Location = new System.Drawing.Point(571, 313);
             this.btnAddURL.Name = "btnAddURL";
             this.btnAddURL.Size = new System.Drawing.Size(86, 23);
             this.btnAddURL.TabIndex = 27;
@@ -156,18 +159,50 @@
             // 
             this.lblNewURL.AutoSize = true;
             this.lblNewURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewURL.Location = new System.Drawing.Point(18, 340);
+            this.lblNewURL.Location = new System.Drawing.Point(21, 313);
             this.lblNewURL.Name = "lblNewURL";
-            this.lblNewURL.Size = new System.Drawing.Size(244, 13);
+            this.lblNewURL.Size = new System.Drawing.Size(236, 13);
             this.lblNewURL.TabIndex = 28;
-            this.lblNewURL.Text = "Specify new blocked URL (ie.: abc.om)-->";
+            this.lblNewURL.Text = "Specify new blocked URL (ie.: abc.com)";
             // 
-            // CD_frmControlPanel
+            // lblCat
+            // 
+            this.lblCat.AutoSize = true;
+            this.lblCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCat.Location = new System.Drawing.Point(294, 313);
+            this.lblCat.Name = "lblCat";
+            this.lblCat.Size = new System.Drawing.Size(257, 13);
+            this.lblCat.TabIndex = 29;
+            this.lblCat.Text = "Assign a category to proposed blocked URL";
+            // 
+            // lvBlockedCats
+            // 
+            this.lvBlockedCats.FormattingEnabled = true;
+            this.lvBlockedCats.Location = new System.Drawing.Point(297, 329);
+            this.lvBlockedCats.Name = "lvBlockedCats";
+            this.lvBlockedCats.Size = new System.Drawing.Size(241, 95);
+            this.lvBlockedCats.TabIndex = 30;
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.Location = new System.Drawing.Point(268, 430);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(139, 23);
+            this.btnMenu.TabIndex = 31;
+            this.btnMenu.Text = "Menu";
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // URL_frmControlPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(679, 415);
+            this.ClientSize = new System.Drawing.Size(679, 503);
+            this.Controls.Add(this.btnMenu);
+            this.Controls.Add(this.lvBlockedCats);
+            this.Controls.Add(this.lblCat);
             this.Controls.Add(this.lblNewURL);
             this.Controls.Add(this.btnAddURL);
             this.Controls.Add(this.txtNewURL);
@@ -181,8 +216,8 @@
             this.Controls.Add(this.lblURLs);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "CD_frmControlPanel";
-            this.Text = "Control Panel";
+            this.Name = "URL_frmControlPanel";
+            this.Text = "EGuard URL Management";
             this.Load += new System.EventHandler(this.frmControlPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -204,5 +239,8 @@
         private System.Windows.Forms.TextBox txtNewURL;
         private System.Windows.Forms.Button btnAddURL;
         private System.Windows.Forms.Label lblNewURL;
+        private System.Windows.Forms.Label lblCat;
+        private System.Windows.Forms.ListBox lvBlockedCats;
+        private System.Windows.Forms.Button btnMenu;
     }
 }

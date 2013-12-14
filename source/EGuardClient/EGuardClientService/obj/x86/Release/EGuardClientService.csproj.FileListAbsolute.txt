@@ -1,0 +1,9 @@
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\bin\Release\TimeControlSettings.txt
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\bin\Release\EGuardClientService.exe
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\bin\Release\EGuardClientService.pdb
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\obj\x86\Release\Interop.NetFwTypeLib.dll
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\obj\x86\Release\EGuardClientService.csproj.ResolveComReference.cache
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\obj\x86\Release\EGuardClientService.Properties.Resources.resources
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\obj\x86\Release\EGuardClientService.csproj.GenerateResource.Cache
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\obj\x86\Release\EGuardClientService.exe
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\obj\x86\Release\EGuardClientService.pdb

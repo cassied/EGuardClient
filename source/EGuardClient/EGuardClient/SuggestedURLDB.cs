@@ -24,7 +24,7 @@ namespace EGuardClient
             SqlCeCommand cmd = new SqlCeCommand();
             cmd.CommandType = System.Data.CommandType.Text;
             //Exclude Suggested URLs that are already being blocked
-            cmd.CommandText = "SELECT URL FROM URLs LEFT OUTER JOIN BlockedURLCat B ON B.BlockedURL=URLs.URL WHERE Category='URL' AND B.BlockedURL IS NULL ORDER BY URL;";
+            cmd.CommandText = "SELECT URL+'-'+Category FROM URLs LEFT OUTER JOIN BlockedURLCat B ON B.BlockedURL+'-'+BlockedCat=URLs.URL+'-'+URLs.Category WHERE B.BlockedURL IS NULL ORDER BY URLs.URL;";
             
             cmd.Connection = connection;
 

@@ -83,6 +83,11 @@ namespace EGuardClient
 
         public void Add(string blockedurl)
         {
+            string[] values;
+            values = blockedurl.ToString().Split('-');
+            string url = values[0];
+            string cat = values[1];
+
             BlockedURL u = new BlockedURL(blockedurl);
             blockedurls.Add(u);
             Changed(this);

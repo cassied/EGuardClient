@@ -24,12 +24,14 @@ namespace EGuardClient
             SqlCeCommand cmd = new SqlCeCommand();
             cmd.CommandType = System.Data.CommandType.Text;
             //Exclude Suggested Cats that are already being blocked
-            cmd.CommandText = "SELECT URL FROM URLs LEFT OUTER JOIN BlockedURLCat B ON B.BlockedCat=URLs.URL WHERE Category='CAT' AND B.BlockedCat IS NULL ORDER BY URL;";
+            cmd.CommandText = "SELECT DISTINCT Category FROM URLs LEFT OUTER JOIN BlockedCat B ON B.CategoryName=URLs.Category WHERE B.CategoryName IS NULL ORDER BY Category;";
             
             cmd.Connection = connection;
 
             cmd.Connection.Open();
             SqlCeDataReader rdr = cmd.ExecuteReader();
+ 
+
             while (rdr.Read())
             {
                 SuggestedCat suggestedCat = new SuggestedCat();

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Data.SqlServerCe;
 using System.IO;
 using System.Data.SqlClient;
-using System.Data;
+
 
 
 namespace EGuardClient
@@ -28,6 +28,7 @@ namespace EGuardClient
         {
             blockedcats.Changed += new BlockedCatList.ChangeHandler(HandleBlockedCatChange);
             suggestedcats.Changed += new SuggestedCatList.ChangeHandler(HandleSuggestedCatChange);
+
 
             blockedcats.Fill();
             FillBlockedCatListBox();
@@ -134,6 +135,13 @@ namespace EGuardClient
             FillBlockedCatListBox();
             suggestedcats.Fill();
             FillSuggestedCatListBox();
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            frmMenu frmMenu = new frmMenu();
+            frmMenu.Show();
+            this.Hide();
         }
 
 

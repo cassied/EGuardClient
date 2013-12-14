@@ -41,6 +41,7 @@
             this.lblNewURL = new System.Windows.Forms.Label();
             this.btnAddURL = new System.Windows.Forms.Button();
             this.txtNewCat = new System.Windows.Forms.TextBox();
+            this.btnMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(300, 354);
+            this.btnExit.Location = new System.Drawing.Point(24, 467);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 16;
@@ -161,12 +162,24 @@
             this.txtNewCat.Size = new System.Drawing.Size(272, 20);
             this.txtNewCat.TabIndex = 29;
             // 
+            // btnMenu
+            // 
+            this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.Location = new System.Drawing.Point(284, 391);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(142, 23);
+            this.btnMenu.TabIndex = 32;
+            this.btnMenu.Text = "Menu";
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
             // CAT_frmControlPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(679, 389);
+            this.ClientSize = new System.Drawing.Size(679, 502);
+            this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.lblNewURL);
             this.Controls.Add(this.btnAddURL);
             this.Controls.Add(this.txtNewCat);
@@ -181,7 +194,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CAT_frmControlPanel";
-            this.Text = "Control Panel";
+            this.Text = "EGuard  Category Management";
             this.Load += new System.EventHandler(this.frmControlPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -203,5 +216,6 @@
         private System.Windows.Forms.Label lblNewURL;
         private System.Windows.Forms.Button btnAddURL;
         private System.Windows.Forms.TextBox txtNewCat;
+        private System.Windows.Forms.Button btnMenu;
     }
 }
