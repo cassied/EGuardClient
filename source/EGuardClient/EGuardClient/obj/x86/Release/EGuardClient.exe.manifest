@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
   <asmv1:assemblyIdentity name="EGuardClient.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
   <application />
   <entryPoint>
@@ -47,24 +47,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EGuardClient.exe" size="609280">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EGuardClient.exe" size="613376">
       <assemblyIdentity name="EGuardClient" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>0o9Yjevo3aPrXKpJxjNfUWXaAqM=</dsig:DigestValue>
+        <dsig:DigestValue>rzXhpdQzSHI1udi1ny1nwIN0dro=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="BlockedURLCat.sql" size="370">
+  <file name="BlockedURLCat.sql" size="357">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>w93ywmQl3L1choOWjlyNYyyGdgA=</dsig:DigestValue>
+      <dsig:DigestValue>JQhVPKYCVIrH1smqkzDILL3VFwA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="EGuard.sdf" size="98304" writeableType="applicationData">
@@ -76,13 +76,13 @@
       <dsig:DigestValue>J0ptz/j080wzBBivm1mRJzGlI4w=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="EGuardClient.exe.config" size="340">
+  <file name="EGuardClient.exe.config" size="331">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>oszrlTWPDVtqI/bXByWQdV2dnoo=</dsig:DigestValue>
+      <dsig:DigestValue>ZVsfmU4Vr0oJdl8CNJugaV4yqRA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="images\EGuardClient.jpg" size="9546">
@@ -103,13 +103,13 @@
       <dsig:DigestValue>2u8wKoyR8qeOPBHej7/ArEePW30=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="TimeControlSettings.txt" size="21">
+  <file name="TimeControlSettings.txt" size="20">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>+yDgXUWDkGvlWFynyOhs3fE02DA=</dsig:DigestValue>
+      <dsig:DigestValue>eMQU60ewim64+sU06jCH7D35EnY=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

@@ -1,0 +1,5 @@
+badword1
+bad
+word
+block
+bannedword
