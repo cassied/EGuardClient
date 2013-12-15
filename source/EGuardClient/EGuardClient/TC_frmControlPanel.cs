@@ -19,6 +19,7 @@ namespace EGuardClient
         public TC_frmControlPanel()
         {
             InitializeComponent();
+            FillTimeControlSettings();
         }
 
          private void btnExit_Click(object sender, EventArgs e)
@@ -166,9 +167,6 @@ namespace EGuardClient
             frmMenu.Show();
             this.Hide();
         }
-
-    
-
     }
 }
 

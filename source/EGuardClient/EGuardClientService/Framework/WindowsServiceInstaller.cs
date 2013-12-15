@@ -27,6 +27,8 @@ namespace EGuardClientService.Framework
         public WindowsServiceInstaller()
             : this(typeof(ServiceImplementation))
         {
+            //... Installer code here
+            this.AfterInstall += new InstallEventHandler(ServiceInstaller_AfterInstall);
         }
 
 
@@ -51,6 +53,9 @@ namespace EGuardClientService.Framework
             }
 
             Configuration = attribute;
+
+            //... Installer code here
+            this.AfterInstall += new InstallEventHandler(ServiceInstaller_AfterInstall);
         }
 
 
@@ -209,6 +214,14 @@ namespace EGuardClientService.Framework
             };
 
             return result;
+        }
+
+        void ServiceInstaller_AfterInstall(object sender, InstallEventArgs e)
+        {
+            using (ServiceController sc = new ServiceController("EGuardClientService"))
+            {
+                sc.Start();
+            }
         }
     }
 }

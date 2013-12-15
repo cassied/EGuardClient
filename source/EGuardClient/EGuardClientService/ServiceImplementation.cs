@@ -188,7 +188,7 @@ namespace EGuardClientService
             // to the local time zone.
             DateTime saveNow = DateTime.Now;
             if (saveNow.Hour >= Convert.ToInt32(startEndTime[0]) &&
-                 saveNow.Hour <= Convert.ToInt32(startEndTime[1]) &&
+                 saveNow.Hour < Convert.ToInt32(startEndTime[1]) &&
                     daysOfWeek.Contains(((saveNow.Day + 5) % 7).ToString()))
             //  (startEndTime[2] == (saveNow.DayOfWeek.ToString())                
             {

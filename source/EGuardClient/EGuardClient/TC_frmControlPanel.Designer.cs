@@ -74,6 +74,7 @@
             this.btnExit.TabIndex = 26;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnTimeControl
             // 
@@ -84,6 +85,7 @@
             this.btnTimeControl.TabIndex = 25;
             this.btnTimeControl.Text = "Save Day/Time";
             this.btnTimeControl.UseVisualStyleBackColor = true;
+            this.btnTimeControl.Click += new System.EventHandler(this.btnTimeControl_Click);
             // 
             // lblTimeEnd
             // 
