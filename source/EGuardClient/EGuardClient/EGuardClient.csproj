@@ -107,6 +107,7 @@
     <Compile Include="CAT_frmControlPanel.Designer.cs">
       <DependentUpon>CAT_frmControlPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseRefresh.cs" />
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>

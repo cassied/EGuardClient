@@ -88,8 +88,11 @@ namespace EGuardClient
         {
             int i = 0;
             BlockedCat u = new BlockedCat();
-            u.blockedCat = lvSuggestedCats.SelectedItems[i].ToString();
-            blockedcats.Save(u);
+            if (lvSuggestedCats.SelectedItems.Count > 0)
+            {
+                u.blockedCat = lvSuggestedCats.SelectedItems[i].ToString();
+                blockedcats.Save(u);
+            }
             blockedcats.Fill();
             FillBlockedCatListBox();
             suggestedcats.Fill();
@@ -99,15 +102,17 @@ namespace EGuardClient
 
         private void btnUnblockCat_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < lvBlockedCats.SelectedItems.Count; i++)
+            if (lvBlockedCats.SelectedItems.Count > 0)
             {
-                BlockedCat u = new BlockedCat();
-                u.blockedCat = lvBlockedCats.SelectedItems[i].ToString();
-                blockedcats.Delete(u);
+                for (int i = 0; i < lvBlockedCats.SelectedItems.Count; i++)
+                {
+                    BlockedCat u = new BlockedCat();
+                    u.blockedCat = lvBlockedCats.SelectedItems[i].ToString();
+                    blockedcats.Delete(u);
 
 
+                }
             }
-
             blockedcats.Fill();
             FillBlockedCatListBox();
             suggestedcats.Fill();
@@ -127,10 +132,17 @@ namespace EGuardClient
 
         private void AddCat_click(object sender, EventArgs e)
         {
-            int i = 0;
-            BlockedCat u = new BlockedCat();
-            u.blockedCat = txtNewCat.Text.ToString();
-            blockedcats.Save(u);
+
+            if (!(string.IsNullOrEmpty(txtNewCat.Text.ToString())))
+            {
+                BlockedCat u = new BlockedCat();
+                u.blockedCat = txtNewCat.Text.ToString();
+                blockedcats.Save(u);
+            }
+            else
+            {
+                MessageBox.Show("You must specify a new category to block.");
+            }
             blockedcats.Fill();
             FillBlockedCatListBox();
             suggestedcats.Fill();

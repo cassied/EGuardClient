@@ -24,6 +24,14 @@ namespace EGuardClient
 
             if (authenticated == true)
             {
+                //Make an update call to the web server
+                //Update local database
+                //connect to java program???? to get NewUpdate.txt which they store in C:\EGuard\dst
+
+
+                //call Database Refresh
+                DatabaseRefresh.Update();
+
                 this.Hide();
                 frmMenu frmMenu = new frmMenu();
                 frmMenu.Show();

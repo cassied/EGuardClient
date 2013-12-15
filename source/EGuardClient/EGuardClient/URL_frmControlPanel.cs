@@ -96,23 +96,27 @@ namespace EGuardClient
         {
             int i = 0;
             BlockedURL u = new BlockedURL();
-            u.blockedURL = lvSuggestedURLs.SelectedItems[i].ToString();
-            blockedurls.Save(u);
-            blockedurls.Fill();
-            FillBlockedURLListBox();
-            suggestedurls.Fill();
-            FillSuggestedURLListBox();
+            if (lvSuggestedURLs.SelectedItems.Count > 0)
+            {
+                u.blockedURL = lvSuggestedURLs.SelectedItems[i].ToString();
+                blockedurls.Save(u);
 
-            string[] values = u.blockedURL.ToString().Split('-');
+                blockedurls.Fill();
+                FillBlockedURLListBox();
+                suggestedurls.Fill();
+                FillSuggestedURLListBox();
 
-            String path = @"C:\Windows\System32\drivers\etc\hosts";
-            StreamWriter sw = new StreamWriter(path, true);
-            //string blacklistedURL = "\n127.0.0.1 " + u.blockedURL;
-            string blacklistedURL = "\n127.0.0.1 " + values[0];
-            String sitetoblock = blacklistedURL;
-            sw.Write(sitetoblock);
-            sw.Close();
-            MessageBox.Show("The URL has been added to the Blacklist.");
+                string[] values = u.blockedURL.ToString().Split('-');
+
+                String path = @"C:\Windows\System32\drivers\etc\hosts";
+                StreamWriter sw = new StreamWriter(path, true);
+                //string blacklistedURL = "\n127.0.0.1 " + u.blockedURL;
+                string blacklistedURL = "\n127.0.0.1 " + values[0];
+                String sitetoblock = blacklistedURL;
+                sw.Write(sitetoblock);
+                sw.Close();
+                MessageBox.Show("The URL has been added to the Blacklist.");
+            }
 
         }
 
@@ -125,22 +129,24 @@ namespace EGuardClient
 
         private void btnRemoveBlock_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < lvBlockedURLs.SelectedItems.Count; i++)
+            if (lvBlockedURLs.SelectedItems.Count > 0)
             {
-                BlockedURL u = new BlockedURL();
-                u.blockedURL = lvBlockedURLs.SelectedItems[i].ToString();
-                //blockedurls -= u;
-                blockedurls.Delete(u);
+                for (int i = 0; i < lvBlockedURLs.SelectedItems.Count; i++)
+                {
+                    BlockedURL u = new BlockedURL();
+                    u.blockedURL = lvBlockedURLs.SelectedItems[i].ToString();
+                    //blockedurls -= u;
+                    blockedurls.Delete(u);
 
-                string[] values = u.blockedURL.ToString().Split('-');
+                    string[] values = u.blockedURL.ToString().Split('-');
 
-                string text = File.ReadAllText(@"C:\Windows\System32\drivers\etc\hosts");
-                //text = text.Replace("127.0.0.1 " + u.blockedURL, string.Empty);
-                text = text.Replace("127.0.0.1 " + values[0], string.Empty);
-                File.WriteAllText(@"C:\Windows\System32\drivers\etc\hosts", text);
-                MessageBox.Show("The URL has been removed from the Blacklist.");
+                    string text = File.ReadAllText(@"C:\Windows\System32\drivers\etc\hosts");
+                    //text = text.Replace("127.0.0.1 " + u.blockedURL, string.Empty);
+                    text = text.Replace("127.0.0.1 " + values[0], string.Empty);
+                    File.WriteAllText(@"C:\Windows\System32\drivers\etc\hosts", text);
+                    MessageBox.Show("The URL has been removed from the Blacklist.");
+                }
             }
-
             blockedurls.Fill();
             FillBlockedURLListBox();
             suggestedurls.Fill();
@@ -161,9 +167,9 @@ namespace EGuardClient
 
         private void btnAddURL_Click(object sender, EventArgs e)
         {
-            if (lvBlockedCats.SelectedIndex == -1)
+            if ((lvBlockedCats.SelectedIndex == -1)||(string.IsNullOrEmpty(txtNewURL.Text.ToString())))
             {
-                MessageBox.Show("You must assign a category to URL");
+                MessageBox.Show("You must specify a url and choose a category for URL");
             }
             else
             {

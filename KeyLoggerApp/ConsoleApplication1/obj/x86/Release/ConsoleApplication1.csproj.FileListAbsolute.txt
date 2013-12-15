@@ -1,0 +1,8 @@
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\KeyLoggerApp\ConsoleApplication1\bin\Release\ConsoleApplication1.exe
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\KeyLoggerApp\ConsoleApplication1\bin\Release\ConsoleApplication1.pdb
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\KeyLoggerApp\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.exe
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\KeyLoggerApp\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.pdb
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\KeyLoggerApp\ConsoleApplication1\bin\Release\ConsoleApplication1.exe.manifest
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\KeyLoggerApp\ConsoleApplication1\bin\Release\ConsoleApplication1.application
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\KeyLoggerApp\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.exe.manifest
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\KeyLoggerApp\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.application
