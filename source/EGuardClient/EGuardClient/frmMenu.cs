@@ -43,5 +43,12 @@ namespace EGuardClient
             this.Hide();
 
         }
+
+        private void btnWords_Click(object sender, EventArgs e)
+        {
+            //WORD_frmControlPanel frmWORD = new WORD_frmControlPanel();
+            //frmWORD.Show();
+            //this.Hide();
+        }
     }
 }

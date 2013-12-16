@@ -14,7 +14,18 @@ namespace EGuardClient
 {
     public static class DatabaseRefresh
     {
-        private const string filePath = @"C:\EGuard\dst";
+        private const string filePath = @"C:\Eguard\dst";
+
+        public static void DeleteFile()
+        {
+
+            string[] txtList = Directory.GetFiles(filePath, "*.txt");
+            foreach (string f in txtList)
+            {
+                File.Delete(f);
+            }
+
+        }
 
         public static void Update()
         {
@@ -32,14 +43,15 @@ namespace EGuardClient
             cmd.Connection = connection;
 
             //Clear suggested URLs in preparation for refresh
-            cmd.CommandText = "DELETE FROM URLs;";
+            //Per web team (12/15/2013), this is a merge not a replacement
+            //cmd.CommandText = "DELETE FROM URLs;";
 
             try
             {
                 cmd.Connection.Open();
-                cmd.ExecuteNonQuery();
-         
-               
+                //cmd.ExecuteNonQuery();
+
+
                 //Get web server file for update
                 var reader = new StreamReader(File.OpenRead(@"C:\Eguard\dst\NewUpdate.txt"));
 
@@ -63,19 +75,22 @@ namespace EGuardClient
                     id = id + 1;
                 }
 
+                reader.Close();
+                reader.Dispose();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString());
+
             }
             finally
             {
+                
                 cmd.Connection.Close();
                 cmd.Connection.Dispose();
                 cmd.Dispose();
             }
-
+            
         }
 
 

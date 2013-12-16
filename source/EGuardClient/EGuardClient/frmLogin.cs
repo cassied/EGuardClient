@@ -29,8 +29,8 @@ namespace EGuardClient
                 //connect to java program???? to get NewUpdate.txt which they store in C:\EGuard\dst
 
 
-                //call Database Refresh
                 DatabaseRefresh.Update();
+                DatabaseRefresh.DeleteFile();
 
                 this.Hide();
                 frmMenu frmMenu = new frmMenu();

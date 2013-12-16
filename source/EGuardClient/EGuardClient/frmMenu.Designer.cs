@@ -34,6 +34,7 @@
             this.btnManageCATs = new System.Windows.Forms.Button();
             this.btnManageTC = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnWords = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             // btnManageURLs
             // 
             this.btnManageURLs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageURLs.Location = new System.Drawing.Point(202, 228);
+            this.btnManageURLs.Location = new System.Drawing.Point(202, 206);
             this.btnManageURLs.Name = "btnManageURLs";
             this.btnManageURLs.Size = new System.Drawing.Size(204, 23);
             this.btnManageURLs.TabIndex = 3;
@@ -60,7 +61,7 @@
             // btnManageCATs
             // 
             this.btnManageCATs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageCATs.Location = new System.Drawing.Point(202, 277);
+            this.btnManageCATs.Location = new System.Drawing.Point(202, 247);
             this.btnManageCATs.Name = "btnManageCATs";
             this.btnManageCATs.Size = new System.Drawing.Size(204, 23);
             this.btnManageCATs.TabIndex = 4;
@@ -90,12 +91,24 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnWords
+            // 
+            this.btnWords.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWords.Location = new System.Drawing.Point(202, 286);
+            this.btnWords.Name = "btnWords";
+            this.btnWords.Size = new System.Drawing.Size(204, 23);
+            this.btnWords.TabIndex = 18;
+            this.btnWords.Text = "Manage Blocked Words";
+            this.btnWords.UseVisualStyleBackColor = true;
+            this.btnWords.Click += new System.EventHandler(this.btnWords_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(620, 463);
+            this.Controls.Add(this.btnWords);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnManageTC);
             this.Controls.Add(this.btnManageCATs);
@@ -116,5 +129,6 @@
         private System.Windows.Forms.Button btnManageCATs;
         private System.Windows.Forms.Button btnManageTC;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnWords;
     }
 }

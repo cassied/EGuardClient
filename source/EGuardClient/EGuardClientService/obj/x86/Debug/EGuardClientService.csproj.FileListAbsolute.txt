@@ -9,3 +9,13 @@ C:\Users\Admin\Desktop\Client\trunk\source\EGuardClient\EGuardClientService\obj\
 C:\Users\Admin\Desktop\Client\trunk\source\EGuardClient\EGuardClientService\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Admin\Desktop\Client\trunk\source\EGuardClient\EGuardClientService\obj\x86\Debug\EGuardClientService.exe
 C:\Users\Admin\Desktop\Client\trunk\source\EGuardClient\EGuardClientService\obj\x86\Debug\EGuardClientService.pdb
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\bin\Debug\BAD_WORD_LIST.txt
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\bin\Debug\TimeControlSettings.txt
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\bin\Debug\EGuardClientService.exe
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\bin\Debug\EGuardClientService.pdb
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\obj\x86\Debug\Interop.NetFwTypeLib.dll
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\obj\x86\Debug\EGuardClientService.csproj.ResolveComReference.cache
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\obj\x86\Debug\EGuardClientService.Properties.Resources.resources
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\obj\x86\Debug\EGuardClientService.csproj.GenerateResource.Cache
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\obj\x86\Debug\EGuardClientService.exe
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\obj\x86\Debug\EGuardClientService.pdb
