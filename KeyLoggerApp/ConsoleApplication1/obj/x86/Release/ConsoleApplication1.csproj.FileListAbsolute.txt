@@ -1,8 +1,9 @@
-C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\KeyLoggerApp\ConsoleApplication1\bin\Release\ConsoleApplication1.exe
-C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\KeyLoggerApp\ConsoleApplication1\bin\Release\ConsoleApplication1.pdb
-C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\KeyLoggerApp\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.exe
-C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\KeyLoggerApp\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.pdb
-C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\KeyLoggerApp\ConsoleApplication1\bin\Release\ConsoleApplication1.exe.manifest
-C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\KeyLoggerApp\ConsoleApplication1\bin\Release\ConsoleApplication1.application
-C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\KeyLoggerApp\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.exe.manifest
-C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\KeyLoggerApp\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.application
+C:\Users\Admin\Desktop\Client\trunk\KeyLoggerApp\ConsoleApplication1\bin\Release\ConsoleApplication1.exe
+C:\Users\Admin\Desktop\Client\trunk\KeyLoggerApp\ConsoleApplication1\bin\Release\ConsoleApplication1.pdb
+C:\Users\Admin\Desktop\Client\trunk\KeyLoggerApp\ConsoleApplication1\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\Client\trunk\KeyLoggerApp\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.exe
+C:\Users\Admin\Desktop\Client\trunk\KeyLoggerApp\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.pdb
+C:\Users\Admin\Desktop\Client\trunk\KeyLoggerApp\ConsoleApplication1\bin\Release\ConsoleApplication1.exe.manifest
+C:\Users\Admin\Desktop\Client\trunk\KeyLoggerApp\ConsoleApplication1\bin\Release\ConsoleApplication1.application
+C:\Users\Admin\Desktop\Client\trunk\KeyLoggerApp\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.exe.manifest
+C:\Users\Admin\Desktop\Client\trunk\KeyLoggerApp\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.application

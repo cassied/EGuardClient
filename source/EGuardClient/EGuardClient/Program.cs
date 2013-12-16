@@ -13,7 +13,7 @@ namespace EGuardClient
         [STAThread]
         static void Main()
         {
-            Keylogger keylogger = new Keylogger();
+            
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

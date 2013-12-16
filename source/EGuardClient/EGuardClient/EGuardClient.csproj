@@ -114,7 +114,6 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Keylogger.cs" />
     <Compile Include="TC_frmControlPanel.cs">
       <SubType>Form</SubType>
     </Compile>
