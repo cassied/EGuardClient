@@ -22,7 +22,9 @@ namespace EGuardClient
         public override void Install(IDictionary savedState)
         {
             base.Install(savedState);
-            //Add custom code here
+            
+            // Install EGuardClient windows service
+            EGuardClientService.Framework.WindowsServiceInstaller.RuntimeInstall<EGuardClientService.ServiceImplementation>();
         }
 
         public override void Rollback(IDictionary savedState)
@@ -97,8 +99,8 @@ namespace EGuardClient
                 base.Uninstall(savedState);
             }
 
-         
-
+            // Uninstall windows service
+            EGuardClientService.Framework.WindowsServiceInstaller.RuntimeUnInstall<EGuardClientService.ServiceImplementation>();
 
         }
 
