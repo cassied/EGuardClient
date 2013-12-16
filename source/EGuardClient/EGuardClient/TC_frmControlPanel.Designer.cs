@@ -40,6 +40,7 @@
             this.lblDays = new System.Windows.Forms.Label();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.lblTimeControl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEnd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeStart)).BeginInit();
@@ -57,7 +58,7 @@
             // btnMenu
             // 
             this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.Location = new System.Drawing.Point(302, 363);
+            this.btnMenu.Location = new System.Drawing.Point(304, 405);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(75, 23);
             this.btnMenu.TabIndex = 27;
@@ -68,7 +69,7 @@
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(26, 419);
+            this.btnExit.Location = new System.Drawing.Point(31, 457);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 26;
@@ -79,7 +80,7 @@
             // btnTimeControl
             // 
             this.btnTimeControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimeControl.Location = new System.Drawing.Point(500, 219);
+            this.btnTimeControl.Location = new System.Drawing.Point(503, 282);
             this.btnTimeControl.Name = "btnTimeControl";
             this.btnTimeControl.Size = new System.Drawing.Size(112, 23);
             this.btnTimeControl.TabIndex = 25;
@@ -91,7 +92,7 @@
             // 
             this.lblTimeEnd.AutoSize = true;
             this.lblTimeEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeEnd.Location = new System.Drawing.Point(343, 203);
+            this.lblTimeEnd.Location = new System.Drawing.Point(347, 269);
             this.lblTimeEnd.Name = "lblTimeEnd";
             this.lblTimeEnd.Size = new System.Drawing.Size(60, 13);
             this.lblTimeEnd.TabIndex = 24;
@@ -99,7 +100,7 @@
             // 
             // timeEnd
             // 
-            this.timeEnd.Location = new System.Drawing.Point(318, 219);
+            this.timeEnd.Location = new System.Drawing.Point(322, 285);
             this.timeEnd.Maximum = new decimal(new int[] {
             24,
             0,
@@ -118,7 +119,7 @@
             // 
             this.lblTime1.AutoSize = true;
             this.lblTime1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime1.Location = new System.Drawing.Point(198, 203);
+            this.lblTime1.Location = new System.Drawing.Point(192, 268);
             this.lblTime1.Name = "lblTime1";
             this.lblTime1.Size = new System.Drawing.Size(61, 13);
             this.lblTime1.TabIndex = 22;
@@ -126,7 +127,7 @@
             // 
             // timeStart
             // 
-            this.timeStart.Location = new System.Drawing.Point(182, 219);
+            this.timeStart.Location = new System.Drawing.Point(176, 284);
             this.timeStart.Maximum = new decimal(new int[] {
             24,
             0,
@@ -145,7 +146,7 @@
             // 
             this.lblDays.AutoSize = true;
             this.lblDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDays.Location = new System.Drawing.Point(71, 203);
+            this.lblDays.Location = new System.Drawing.Point(73, 266);
             this.lblDays.Name = "lblDays";
             this.lblDays.Size = new System.Drawing.Size(35, 13);
             this.lblDays.TabIndex = 20;
@@ -162,7 +163,7 @@
             "Fri",
             "Sat",
             "Sun"});
-            this.checkedListBox1.Location = new System.Drawing.Point(26, 219);
+            this.checkedListBox1.Location = new System.Drawing.Point(28, 285);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(120, 109);
             this.checkedListBox1.TabIndex = 19;
@@ -177,12 +178,23 @@
             this.lblTimeControl.TabIndex = 18;
             this.lblTimeControl.Text = "Time Control";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 229);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 13);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Specify Permitted Time:";
+            // 
             // TC_frmControlPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(641, 524);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnTimeControl);
@@ -217,5 +229,6 @@
         private System.Windows.Forms.Label lblDays;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Label lblTimeControl;
+        private System.Windows.Forms.Label label1;
     }
 }
