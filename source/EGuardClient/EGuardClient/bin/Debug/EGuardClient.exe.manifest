@@ -47,14 +47,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EGuardClient.exe" size="613376">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EGuardClient.exe" size="612864">
       <assemblyIdentity name="EGuardClient" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>j6l1yCWkiftmFx8ecVcWVo0V+ng=</dsig:DigestValue>
+        <dsig:DigestValue>6rsU7PE6d9jPcp4eYTq+c9bRRFw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
