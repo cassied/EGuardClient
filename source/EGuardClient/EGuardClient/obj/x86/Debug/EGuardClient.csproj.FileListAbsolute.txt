@@ -106,3 +106,4 @@ C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardCl
 C:\Users\Admin\Desktop\Client\trunk\source\EGuardClient\EGuardClient\bin\Debug\BAD_WORD_LIST.txt
 C:\Users\Admin\Desktop\Client\trunk\source\EGuardClient\EGuardClient\bin\Debug\EGuardClientService.exe
 C:\Users\Admin\Desktop\Client\trunk\source\EGuardClient\EGuardClient\bin\Debug\EGuardClientService.pdb
+C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClient\obj\x86\Debug\EGuardClient.WORD_frmControlPanel.resources

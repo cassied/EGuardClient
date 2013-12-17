@@ -78,6 +78,7 @@
             // 
             // lvSuggestedWords
             // 
+            this.lvSuggestedWords.Enabled = false;
             this.lvSuggestedWords.FormattingEnabled = true;
             this.lvSuggestedWords.Location = new System.Drawing.Point(31, 209);
             this.lvSuggestedWords.Name = "lvSuggestedWords";
@@ -101,6 +102,7 @@
             this.btnRemoveBlock.TabIndex = 38;
             this.btnRemoveBlock.Text = "<<";
             this.btnRemoveBlock.UseVisualStyleBackColor = true;
+            this.btnRemoveBlock.Click += new System.EventHandler(this.btnRemoveBlock_Click);
             // 
             // btnBlock
             // 
@@ -190,6 +192,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "WORD_frmControlPanel";
             this.Text = "WORD_frmControlPanel";
+            this.Load += new System.EventHandler(this.WORD_frmControlPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -101,6 +101,9 @@
     <Compile Include="BlockedURL.cs" />
     <Compile Include="BlockedURLDB.cs" />
     <Compile Include="BlockedURLList.cs" />
+    <Compile Include="BlockedWord.cs" />
+    <Compile Include="BlockedWordDB.cs" />
+    <Compile Include="BlockedWordList.cs" />
     <Compile Include="CAT_frmControlPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +182,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="URL.cs" />
     <Compile Include="UserRec.cs" />
+    <Compile Include="WORD_frmControlPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WORD_frmControlPanel.Designer.cs">
+      <DependentUpon>WORD_frmControlPanel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Blacklist.resx">
       <DependentUpon>Blacklist.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +227,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WORD_frmControlPanel.resx">
+      <DependentUpon>WORD_frmControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="EGuardClient_TemporaryKey.pfx" />
     <None Include="EGuardDataSet.xsc">

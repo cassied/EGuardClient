@@ -34,6 +34,7 @@ namespace EGuardClient
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new EGuardClientLogin());
+      
         }
     }
 }

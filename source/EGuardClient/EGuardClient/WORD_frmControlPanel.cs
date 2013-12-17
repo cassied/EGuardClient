@@ -17,23 +17,19 @@ namespace EGuardClient
         }
         
         private BlockedWordList blockedwords = new BlockedWordList();
-        private SuggestedWordList suggestedcats = new SuggestedWordList();
 
         private void WORD_frmControlPanel_Load(object sender, EventArgs e)
         {
-            blockedwords.Changed += new BlockedWordList.ChangeHandler(HandleBlockedCatChange);
-            suggestedwords.Changed += new SuggestedWordList.ChangeHandler(HandleSuggestedCatChange);
-
-
-            blockedwordsCatListBox();
-            suggestedwords.Fill();
-            FillSuggestedWordListBox();
+            blockedwords.Changed += new BlockedWordList.ChangeHandler(HandleBlockedWordChange);
+            blockedwords.Fill();
+            FillBlockedWordListBox();
+ 
 
         }
 
-        private void FillBlockedCatListBox()
+        private void FillBlockedWordListBox()
         {
-            BlockedCat u;
+            BlockedWord u;
 
             lvBlockedWords.Items.Clear();
             for (int i = 0; i < blockedwords.Count; i++)
@@ -50,24 +46,7 @@ namespace EGuardClient
 
         }
 
-        private void FillSuggestedWlordListBox()
-        {
-            SuggestedWords u;
 
-            lvSuggestedWords.Items.Clear();
-
-            for (int i = 0; i < suggestedwords.Count; i++)
-            {
-                u = suggestedwords[i];
-                lvSuggestedWords.Items.Add(u.GetDisplayText());
-            }
-        }
-
-        private void HandleSuggestedWordChange(SuggestedWordList suggestedcats)
-        {
-            suggestedwords.Save();
-            FillSuggestedWordListBox();
-        }
         private void btnExit_Click(object sender, EventArgs e)
         {
             
@@ -78,21 +57,7 @@ namespace EGuardClient
 
         }
 
-        private void btnBlock_Click(object sender, EventArgs e)
-        {
-            int i = 0;
-            BlockedWords u = new BlockedWords();
-            if (lvSuggestedWords.SelectedItems.Count > 0)
-            {
-                u.blockedWords = lvSuggestedWords.SelectedItems[i].ToString();
-                blockedwords.Save(u);
-            }
-            blockedwords.Fill();
-            FillBlockedWordListBox();
-            suggestedwords.Fill();
-            FillSuggestedWordListBox();
 
-        }
 
         private void btnUnblockWord_Click(object sender, EventArgs e)
         {
@@ -101,16 +66,14 @@ namespace EGuardClient
                 for (int i = 0; i < lvBlockedWords.SelectedItems.Count; i++)
                 {
                     BlockedWord u = new BlockedWord();
-                    u.blockedWord = lvBlockedWord.SelectedItems[i].ToString();
-                    blockedword.Delete(u);
-
+                    u.blockedword = lvBlockedWords.SelectedItems[i].ToString();
+                    blockedwords.Delete(u);
 
                 }
             }
             blockedwords.Fill();
             FillBlockedWordListBox();
-            suggestedwords.Fill();
-            FillSuggestedWordListBox();
+
         }
 
 
@@ -120,7 +83,7 @@ namespace EGuardClient
             if (!(string.IsNullOrEmpty(txtNewWord.Text.ToString())))
             {
                 BlockedWord u = new BlockedWord();
-                u.blockedWord = txtNewWord.Text.ToString();
+                u.blockedword = txtNewWord.Text.ToString();
                 blockedwords.Save(u);
             }
             else
@@ -129,8 +92,7 @@ namespace EGuardClient
             }
             blockedwords.Fill();
             FillBlockedWordListBox();
-            suggestedwords.Fill();
-            FillSuggestedWordListBox();
+
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -139,6 +101,26 @@ namespace EGuardClient
             frmMenu.Show();
             this.Hide();
         }
+
+        private void btnRemoveBlock_Click(object sender, EventArgs e)
+        {
+            if (lvBlockedWords.SelectedItems.Count > 0)
+            {
+                for (int i = 0; i < lvBlockedWords.SelectedItems.Count; i++)
+                {
+                    BlockedWord u = new BlockedWord();
+                    u.blockedword = lvBlockedWords.SelectedItems[i].ToString();
+                    blockedwords.Delete(u);
+
+                }
+
+
+            }
+            blockedwords.Fill();
+            FillBlockedWordListBox();
+        }
+
+      
 
 
     }

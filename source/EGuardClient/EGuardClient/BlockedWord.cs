@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EGuardClient
 {
-    class BlockedWord
+    public class BlockedWord
     {
         private string blockedWord;
 

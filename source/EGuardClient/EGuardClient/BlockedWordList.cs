@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EGuardClient
 {
-    class BlockedWordList
+    public class BlockedWordList
     {
         private List<BlockedWord> blockedwords;
 
@@ -57,6 +57,7 @@ namespace EGuardClient
         public void Fill()
         {
             blockedwords = BlockedWordDB.GetBlockedWords();
+
         }
 
         public void Save()
@@ -106,5 +107,5 @@ namespace EGuardClient
             return wl;
         }
     }
-    }
-}
+ }
+
