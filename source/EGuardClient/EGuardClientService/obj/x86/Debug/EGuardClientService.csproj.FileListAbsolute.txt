@@ -19,3 +19,4 @@ C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardCl
 C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\obj\x86\Debug\EGuardClientService.csproj.GenerateResource.Cache
 C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\obj\x86\Debug\EGuardClientService.exe
 C:\Users\Lisa-Toshiba\Documents\GitHub\EGuardClient\source\EGuardClient\EGuardClientService\obj\x86\Debug\EGuardClientService.pdb
+C:\Users\Admin\Desktop\Client\trunk\source\EGuardClient\EGuardClientService\bin\Debug\BAD_WORD_LIST.txt
