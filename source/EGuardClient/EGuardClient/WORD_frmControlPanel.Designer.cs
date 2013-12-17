@@ -163,6 +163,7 @@
             this.btnAddWord.TabIndex = 43;
             this.btnAddWord.Text = "Add Word";
             this.btnAddWord.UseVisualStyleBackColor = true;
+            this.btnAddWord.Click += new System.EventHandler(this.btnAddWord_Click);
             // 
             // txtNewWord
             // 

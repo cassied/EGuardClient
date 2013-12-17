@@ -21,6 +21,8 @@ namespace EGuardClient
         private void WORD_frmControlPanel_Load(object sender, EventArgs e)
         {
             blockedwords.Changed += new BlockedWordList.ChangeHandler(HandleBlockedWordChange);
+            blockedwords.Changed -= new BlockedWordList.ChangeHandler(HandleBlockedWordChange);
+
             blockedwords.Fill();
             FillBlockedWordListBox();
  
@@ -58,43 +60,6 @@ namespace EGuardClient
         }
 
 
-
-        private void btnUnblockWord_Click(object sender, EventArgs e)
-        {
-            if (lvBlockedWords.SelectedItems.Count > 0)
-            {
-                for (int i = 0; i < lvBlockedWords.SelectedItems.Count; i++)
-                {
-                    BlockedWord u = new BlockedWord();
-                    u.blockedword = lvBlockedWords.SelectedItems[i].ToString();
-                    blockedwords.Delete(u);
-
-                }
-            }
-            blockedwords.Fill();
-            FillBlockedWordListBox();
-
-        }
-
-
-        private void AddWord_click(object sender, EventArgs e)
-        {
-
-            if (!(string.IsNullOrEmpty(txtNewWord.Text.ToString())))
-            {
-                BlockedWord u = new BlockedWord();
-                u.blockedword = txtNewWord.Text.ToString();
-                blockedwords.Save(u);
-            }
-            else
-            {
-                MessageBox.Show("You must specify a new word to block.");
-            }
-            blockedwords.Fill();
-            FillBlockedWordListBox();
-
-        }
-
         private void btnMenu_Click(object sender, EventArgs e)
         {
             frmMenu frmMenu = new frmMenu();
@@ -104,20 +69,62 @@ namespace EGuardClient
 
         private void btnRemoveBlock_Click(object sender, EventArgs e)
         {
-            if (lvBlockedWords.SelectedItems.Count > 0)
+       
+            List<BlockedWord> bl = new List<BlockedWord>();
+            List<BlockedWord> bl2 = new List<BlockedWord>();
+
+            for (int i = 0; i < lvBlockedWords.SelectedItems.Count; i++)
             {
-                for (int i = 0; i < lvBlockedWords.SelectedItems.Count; i++)
-                {
-                    BlockedWord u = new BlockedWord();
-                    u.blockedword = lvBlockedWords.SelectedItems[i].ToString();
-                    blockedwords.Delete(u);
+                BlockedWord u = new BlockedWord();
+                u.blockedword = lvBlockedWords.SelectedItems[i].ToString();
+                bl.Add(u);
 
-                }
+            }
+            foreach (BlockedWord u in bl)
+            {
+                lvBlockedWords.Items.Remove(u.blockedword);
+  
+            }
+            
+            for (int i=0; i < lvBlockedWords.Items.Count; i++)
+            {
+                BlockedWord u = new BlockedWord();
+                u.blockedword = lvBlockedWords.Items[i].ToString();
+                bl2.Add(u);
 
+            }
 
+            blockedwords.Delete(bl2);
+
+            blockedwords.Fill();
+            FillBlockedWordListBox();
+        }
+
+        private void btnAddWord_Click(object sender, EventArgs e)
+        {
+            List<BlockedWord> bl = new List<BlockedWord>();
+            for (int i = 0; i < lvBlockedWords.Items.Count; i++)
+            {
+                BlockedWord u = new BlockedWord();
+                u.blockedword = lvBlockedWords.Items[i].ToString();
+                bl.Add(u);
+            }
+
+            if (!(string.IsNullOrEmpty(txtNewWord.Text.ToString())))
+            {
+                BlockedWord u = new BlockedWord();
+                u.blockedword = txtNewWord.Text.ToString();
+                bl.Add(u);
+                blockedwords.Save(bl);
+
+            }
+            else
+            {
+                MessageBox.Show("You must specify a new word to block.");
             }
             blockedwords.Fill();
             FillBlockedWordListBox();
+
         }
 
       

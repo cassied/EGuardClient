@@ -66,11 +66,11 @@ namespace EGuardClient
 
         }
 
-        public void Save(BlockedWord blockedWord)
+        public void Save(List<BlockedWord> blockedWord)
         {
             BlockedWordDB.SaveBlockedWord(blockedWord);
         }
-        public void Delete(BlockedWord blockedWord)
+        public void Delete(List<BlockedWord> blockedWord)
         {
             BlockedWordDB.DeleteBlockedWord(blockedWord);      
         }

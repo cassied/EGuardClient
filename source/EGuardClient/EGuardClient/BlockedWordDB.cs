@@ -16,15 +16,12 @@ namespace EGuardClient
 {
     public class BlockedWordDB
     {
-       // private const string conStr = "Data Source=|DataDirectory|\\EGuard.sdf";
-
-        
+       
         public static List<BlockedWord> GetBlockedWords()
         {
           
             List<BlockedWord> blockedwords = new List<BlockedWord>();
-
-            //string[] lines = System.IO.File.ReadAllLines(Application.StartupPath + @"\BAD_WORD_LIST.txt");
+            
             var reader = new StreamReader(File.OpenRead(Application.StartupPath + @"\BAD_WORD_LIST.txt"));
 
             
@@ -38,106 +35,53 @@ namespace EGuardClient
                 blockedwords.Add(blockedword);
                  
             }
+            reader.Close();
 
             return blockedwords;
         }
 
-        public static void DeleteBlockedWord(BlockedWord blockedword)
+        public static void DeleteBlockedWord(List<BlockedWord> blockedword)
         {
 
-            string filePath = Application.StartupPath + @"\BAD_WORD_LIST.txt";
-            string stringToRemove = blockedword.ToString();
-
-            List<string> readLines = new List<string>(); 
-
-            //Read the file line-wise into List
-            using (var streamReader = new StreamReader(filePath, Encoding.Default))
+            using (StreamWriter sw = new StreamWriter(Application.StartupPath + @"\BAD_WORD_LIST.txt"))
             {
-                while (!streamReader.EndOfStream)
+                foreach (BlockedWord u in blockedword)
                 {
-                    readLines.Add(streamReader.ReadLine());
+                    sw.WriteLine(u.blockedword);
+
                 }
-
-                streamReader.Close();
-                GC.Collect();
-            }
-  
-
-            // If list contains stringToAdd then remove all its instances from the list; otherwise add stringToAdd to the list
-            if (readLines.Contains(stringToRemove))
-            {
-                readLines.Remove(stringToRemove);
-    
-            }
-            else
-            {
-                //readLines.Add(stringToAdd);
+                sw.Close();
             }
 
-            // Write the modified list to the file
-            using (var streamWriter = new StreamWriter(filePath,true,Encoding.Default))
-            {
-                foreach (string line in readLines)
-                {
-                  
-                    streamWriter.WriteLine(line);
-                    
-                }
-                streamWriter.Close();
-            }
 
         }
-        public static void SaveBlockedWord(BlockedWord u)
+        public static void SaveBlockedWord(List<BlockedWord> blockedword)
         {
-            SqlCeConnection connection = new SqlCeConnection(System.Configuration.ConfigurationManager.ConnectionStrings["Connection"].ConnectionString.ToString());
-            SqlCeCommand cmd = new SqlCeCommand();
-            cmd.CommandType = System.Data.CommandType.Text;
-            cmd.Connection = connection;
-
-            String url = string.Empty;
-
             try
             {
-                //cmd.Connection.Open();
-                //cmd.CommandText = "INSERT INTO BlockedCat (CategoryName) VALUES ('" + u.blockedCat + "');";                
-                //cmd.ExecuteNonQuery();
+                using (StreamWriter sw = new StreamWriter(Application.StartupPath + @"\BAD_WORD_LIST.txt"))
+                {
+                    foreach (BlockedWord u in blockedword)
+                    {
+                        sw.WriteLine(u.blockedword);
 
+                    }
+                    sw.Close();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
             }
+
                
           }
 
         public static void SaveBlockedWords(List<BlockedWord> blockedwords)
         {
-            //SqlCeConnection connection = new SqlCeConnection(System.Configuration.ConfigurationManager.ConnectionStrings["Connection"].ConnectionString.ToString());
-            //SqlCeCommand cmd = new SqlCeCommand();
-            //cmd.CommandType = System.Data.CommandType.Text;
-            //cmd.Connection = connection;
 
-            //String url = string.Empty;
-
-            //try
-            //{
-            //    cmd.Connection.Open();
-            //    //cmd.CommandText = "DELETE FROM BlockedURLCat WHERE BlockedURL IS NOT NULL;";
-            //    //cmd.ExecuteNonQuery();
-
-            //    foreach (BlockedWord u in blockedwords)
-            //    {
-            //        cmd.CommandText = "INSERT INTO BlockedCat (CategoryName) VALUES ('"+u.blockedWord.ToString() + "');";                
-            //        cmd.ExecuteNonQuery();
-            //   }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message.ToString());
-      
-            //}
                
-          }
+         }
 
     }
     }
